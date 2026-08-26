@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Diagnóstico de Fadiga de Criativo no Meta Ads</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#EF4444" opacity="0.2"/>
+    <text x="905" y="29" fill="#EF4444" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">CONTROLE DE SATURAÇÃO</text>
+  
+      
+      <rect x="60" y="80" width="880" height="440" rx="10" fill="#1E293B"/>
+      
+      <!-- Axis Lines -->
+      <path d="M 120 440 L 880 440" stroke="#64748B" stroke-width="2"/>
+      <path d="M 120 440 L 120 120" stroke="#64748B" stroke-width="2"/>
+      <text x="880" y="470" fill="#94A3B8" font-family="Inter" font-size="12" text-anchor="end">Tempo de Veiculação (Semanas 1 a 6)</text>
+      <text x="110" y="115" fill="#94A3B8" font-family="Inter" font-size="12" text-anchor="end">CPA (R$)</text>
+
+      <!-- CPA Curve Rising -->
+      <path d="M 120 380 Q 400 370 580 300 T 860 140" stroke="#EF4444" stroke-width="4" fill="none"/>
+      <text x="860" y="130" fill="#EF4444" font-family="Sora" font-size="14" font-weight="800">CPA Dispara (R$ 78,00)</text>
+
+      <!-- CTR Curve Dropping -->
+      <path d="M 120 160 Q 400 170 580 250 T 860 400" stroke="#38BDF8" stroke-width="4" fill="none"/>
+      <text x="860" y="420" fill="#38BDF8" font-family="Sora" font-size="14" font-weight="800">CTR Cai (0.6%)</text>
+
+      <!-- Fatigue Threshold Marker -->
+      <path d="M 580 120 L 580 440" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6,6"/>
+      <rect x="500" y="130" width="160" height="30" rx="4" fill="#F59E0B"/>
+      <text x="580" y="151" fill="#000000" font-family="Inter" font-size="11" font-weight="800" text-anchor="middle">Ponto de Troca de Criativo</text>
+      
+      <rect x="120" y="480" width="760" height="30" rx="4" fill="#0F172A"/>
+      <text x="500" y="500" fill="#F8FAFC" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle">Quando a Frequência passa de 2.8 e o CPA sobe mais de 20%, o anúncio deve ser renovado.</text>
+    </svg>

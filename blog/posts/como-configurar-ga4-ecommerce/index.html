@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Configurar o GA4 para E-commerce e Medir Conversões Reais | Irmãos do Pixel | Tráfego & Performance</title>
+  <meta name="description" content="Aprenda a configurar o Google Analytics 4 (GA4) para e-commerce, mapear o funil de compras e auditar eventos de receita e conversões reais.">
+  <link rel="canonical" href="https://irmaosdopixel.com.br/blog/posts/como-configurar-ga4-ecommerce">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Como Configurar o GA4 para E-commerce e Medir Conversões Reais | Irmãos do Pixel | Tráfego & Performance">
+  <meta property="og:description" content="Aprenda a configurar o Google Analytics 4 (GA4) para e-commerce, mapear o funil de compras e auditar eventos de receita e conversões reais.">
+  <meta property="og:url" content="https://irmaosdopixel.com.br/blog/posts/como-configurar-ga4-ecommerce">
+  <meta property="og:site_name" content="Irmãos do Pixel | Tráfego & Performance">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como Configurar o GA4 para E-commerce e Medir Conversões Reais | Irmãos do Pixel | Tráfego & Performance">
+  <meta name="twitter:description" content="Aprenda a configurar o Google Analytics 4 (GA4) para e-commerce, mapear o funil de compras e auditar eventos de receita e conversões reais.">
+
+  <!-- Google AdSense Script Oficial -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8378615978627827" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts: Sora & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como Configurar o GA4 para E-commerce e Medir Conversões Reais",
+    "description": "Aprenda a configurar o Google Analytics 4 (GA4) para e-commerce, mapear o funil de compras e auditar eventos de receita e conversões reais.",
+    "author": {
+      "@type": "Organization",
+      "name": "Irmãos do Pixel"
+    },
+    "datePublished": "2026-08-21",
+    "dateModified": "2026-08-21",
+    "mainEntityOfPage": "https://irmaosdopixel.com.br/blog/posts/como-configurar-ga4-ecommerce",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Irmãos do Pixel | Tráfego & Performance",
+      "url": "https://irmaosdopixel.com.br/blog"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a href="/blog" class="site-logo">
+      <div class="logo-pixels">
+        <span class="pixel-sq pixel-blue"></span>
+        <span class="pixel-sq pixel-orange"></span>
+        <span class="pixel-sq pixel-navy"></span>
+        <span class="pixel-sq pixel-muted"></span>
+      </div>
+      <span>Irmãos do Pixel</span>
+    </a>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/">Site Oficial</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog#artigos">Artigos</a></li>
+        <li><a href="/blog/sobre">Sobre</a></li>
+        <li><a href="/blog/contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta-wrap">
+      <a href="/blog/contato" class="btn btn-primary btn-sm">Fale Conosco</a>
+    </div>
+
+    <button class="mobile-toggle" aria-label="Abrir menu de navegação">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
+  <main class="main-wrapper">
+    <div class="container">
+  <div class="layout-with-sidebar">
+    <article class="article-content">
+      <header class="article-header">
+        <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/blog">Blog</a> &rsaquo;
+          <a href="/blog#artigos">Analytics & Dados</a> &rsaquo;
+          <span>Artigo</span>
+        </nav>
+
+        <h1 class="article-title">Como Configurar o GA4 para E-commerce e Medir Conversões Reais</h1>
+
+        <div class="article-meta">
+          <span><strong>Autor:</strong> Irmãos do Pixel</span>
+          <span><strong>Publicação:</strong> 21 de Agosto de 2026</span>
+          <span><strong>Tempo de leitura:</strong> 8 min</span>
+          <span class="badge badge-brand">Analytics & Dados</span>
+        </div>
+      </header>
+
+      <!-- In-Article Top Ad Slot -->
+      <div class="ad-slot-wrapper ad-slot-in-article">
+        <span class="ad-label">Publicidade</span>
+        <div class="ad-placeholder">
+          <span>Espaço para Anúncio AdSense (Responsivo / 728x280)</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>Acompanhar a jornada do cliente desde a primeira visualização de um produto até o pagamento final é o que separa lojas virtuais que escalam de operações que operam no escuro.</p>
+<p>Na nossa experiência na <strong>Irmãos do Pixel</strong>, ao assumirmos a gestão e auditoria de tráfego para comércio eletrônico, o cenário mais frequente é encontrar relatórios de faturamento do <strong>Google Analytics 4 (GA4)</strong> com discrepâncias de 30% a 50% em relação ao sistema financeiro da empresa.</p>
+<p>Essas falhas ocorrem por eventos mal configurados, parâmetros de moeda incorretos ou falta de acionadores de deduplicação na página de confirmação de pedido.</p>
+<p>Neste guia prático e aprofundado, nós vamos te mostrar <strong>como estruturar o GA4 para e-commerce em 6 passos</strong>, mapeando todos os eventos recomendados pelo Google para tomar decisões de mídia com dados 100% confiáveis.</p>
+<hr>
+<h2>Os 5 Eventos Obrigatórios do Funil de E-commerce no GA4</h2>
+<p>O Google Analytics 4 adota um modelo baseado integralmente em eventos e parâmetros flexíveis.</p>
+<p>Para ter um funil de comércio eletrônico completo, a sua loja precisa enviar com precisão os 5 eventos padronizados da documentação oficial:</p>
+<ol>
+<li><strong><code>view_item_list</code> ou <code>view_item</code></strong>: O visitante visualiza a vitrine de uma categoria ou acessa a página detalhada de um produto específico.</li>
+<li><strong><code>add_to_cart</code></strong>: O usuário clica para adicionar o item ao carrinho de compras.</li>
+<li><strong><code>view_cart</code></strong>: O cliente abre a tela de revisão do carrinho antes de avançar.</li>
+<li><strong><code>begin_checkout</code></strong>: O visitante clica para iniciar o processo de preenchimento de endereço e dados de pagamento.</li>
+<li><strong><code>purchase</code></strong>: O evento mais valioso, disparado apenas quando o pedido é confirmado com sucesso na página de obrigado.</li>
+</ol>
+<pre><code>[view_item] ---&gt; [add_to_cart] ---&gt; [view_cart] ---&gt; [begin_checkout] ---&gt; [purchase] (Receita Confirmada)
+</code></pre>
+<hr>
+<div class="read-also-box">
+  <span class="read-also-tag">Leia Também</span>
+  <span><a href="/blog/posts/guia-completo-google-tag-manager">Veja como criar acionadores e variáveis personalizadas no Google Tag Manager</a></span>
+</div>
+<hr>
+<h2>Comparativo: Eventos Padrão do GA4 vs. Métricas de Conversão</h2>
+<p>Entenda como os parâmetros enriquecem a análise de desempenho de cada canal de aquisição:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Evento do GA4</th>
+<th style="text-align:left">Parâmetros Críticos Necessários</th>
+<th style="text-align:left">Principal Indicador Extraído</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong><code>view_item</code></strong></td>
+<td style="text-align:left"><code>item_id</code>, <code>item_name</code>, <code>price</code>, <code>item_category</code></td>
+<td style="text-align:left">Taxa de interesse por categoria e produto</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>add_to_cart</code></strong></td>
+<td style="text-align:left"><code>items</code>, <code>value</code>, <code>currency: 'BRL'</code></td>
+<td style="text-align:left">Taxa de adição ao carrinho (Drop-off inicial)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>begin_checkout</code></strong></td>
+<td style="text-align:left"><code>items</code>, <code>value</code>, <code>coupon</code> (se houver)</td>
+<td style="text-align:left">Eficiência do fluxo de fechamento de pedido</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>purchase</code></strong></td>
+<td style="text-align:left"><code>transaction_id</code>, <code>value</code>, <code>tax</code>, <code>shipping</code>, <code>currency</code></td>
+<td style="text-align:left">Receita total real, ticket médio e ROAS por canal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Passo a Passo para Configurar o GA4 no E-commerce em 6 Etapas</h2>
+<p>Siga as diretrizes abaixo para garantir que seus relatórios reflitam os números reais do faturamento.</p>
+<h3>Passo 1: Criar a Propriedade do GA4 e o Fluxo de Dados Web</h3>
+<ol>
+<li>Acesse o <a href="https://analytics.google.com/">Google Analytics</a> e entre no menu inferior <strong>Administrador</strong>.</li>
+<li>Clique em <strong>Criar propriedade</strong> e preencha o nome da sua loja virtual.</li>
+<li>Defina o fuso horário como <code>Brasil (GMT-03:00)</code> e a moeda como <code>Real brasileiro (R$ BRL)</code>.</li>
+<li>Crie um <strong>Fluxo de dados da Web</strong> inserindo a URL do seu site.</li>
+<li>Copie o seu <strong>ID da métrica</strong> iniciado por <code>G-XXXXXXXXXX</code>.</li>
+</ol>
+<hr>
+<h3>Passo 2: Ajustar a Retenção de Dados para 14 Meses</h3>
+<p>Por padrão de fábrica, o GA4 vem configurado para reter dados de usuários e eventos por apenas 2 meses nos relatórios de exploração.</p>
+<p>Para estender para o limite máximo permitido:</p>
+<ol>
+<li>No menu <strong>Administrador</strong>, navegue até <strong>Coleta e modificação de dados</strong> &gt; <strong>Retenção de dados</strong>.</li>
+<li>Altere a opção &quot;Retenção de dados de eventos&quot; de 2 meses para <strong>14 meses</strong>.</li>
+<li>Clique em <strong>Salvar</strong>.</li>
+</ol>
+<figure class="article-figure">
+  <img src="/assets/images/posts/ga4-data-retention.svg" alt="Painel do GA4 destacando a configuração de retenção de dados para 14 meses">
+  <figcaption><strong>Imagem 1:</strong> Ajuste de retenção de dados no painel administrativo do Google Analytics 4. <em>Fonte: Google Analytics Help Center / Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<hr>
+<h3>Passo 3: Ativar o Google Signals para Relatórios de Dispositivos Cruzados</h3>
+<p>O recurso Google Signals permite cruzar dados de visitantes logados em contas Google, entregando insights sobre comportamento entre celulares e computadores:</p>
+<ol>
+<li>Vá em <strong>Administrador</strong> &gt; <strong>Coleta de dados</strong> &gt; <strong>Google Signals</strong>.</li>
+<li>Clique em <strong>Começar</strong> e confirme a ativação.</li>
+<li>Isso habilita relatórios avançados de dados demográficos (faixa etária, gênero e interesses).</li>
+</ol>
+<hr>
+<h3>Passo 4: Estruturar a Camada de Dados (Data Layer) de Compra</h3>
+<p>Para que o evento <code>purchase</code> capture o valor correto e evite duplicações, o backend da sua loja deve injetar um payload JSON padronizado na página de sucesso:</p>
+<pre><code class="language-javascript">window.dataLayer = window.dataLayer || [];
+dataLayer.push({ ecommerce: null }); // Limpa o objeto anterior
+dataLayer.push({
+  event: &quot;purchase&quot;,
+  ecommerce: {
+    transaction_id: &quot;PED-2026-9041&quot;,
+    value: 349.90,
+    tax: 0.00,
+    shipping: 25.00,
+    currency: &quot;BRL&quot;,
+    items: [
+      {
+        item_id: &quot;CALC-JEANS-01&quot;,
+        item_name: &quot;Calça Jeans Slim&quot;,
+        item_category: &quot;Vestuário&quot;,
+        price: 349.90,
+        quantity: 1
+      }
+    ]
+  }
+});
+</code></pre>
+<figure class="article-figure">
+  <img src="/assets/images/posts/ga4-datalayer-schema.svg" alt="Esquema da camada de dados de comércio eletrônico no GA4">
+  <figcaption><strong>Imagem 2:</strong> Estrutura oficial da camada de dados para eventos de e-commerce no GA4. <em>Fonte: Documentação Google for Developers / Ilustração Editorial</em></figcaption>
+</figure>
+<hr>
+<h3>Passo 5: Criar a Tag de Evento de E-commerce no GTM</h3>
+<p>Com o Data Layer ativo no site:</p>
+<ol>
+<li>No Google Tag Manager, crie uma tag do tipo <strong>Google Analytics: evento do GA4</strong>.</li>
+<li>Selecione a tag de configuração base ou insira seu ID de métrica.</li>
+<li>No campo &quot;Nome do evento&quot;, utilize a variável de evento embutida <code>{{Event}}</code> ou digite <code>purchase</code>.</li>
+<li>No campo &quot;Mais configurações&quot; &gt; <strong>Comércio eletrônico</strong>, marque a opção <strong>Enviar dados de comércio eletrônico</strong> e selecione a fonte como <strong>Data Layer</strong>.</li>
+<li>No acionador, utilize um evento personalizado com o nome <code>purchase</code>.</li>
+</ol>
+<div class="checklist-box">
+  <div class="checklist-title">Checklist de Auditoria de Transações:</div>
+  <ul>
+    <li>Verificar se o valor total (`value`) inclui o frete de acordo com a sua regra contábil.</li>
+    <li>Conferir se a moeda está configurada estritamente como `BRL`.</li>
+    <li>Testar se atualizar a página de obrigado não dispara um segundo pedido com mesmo ID.</li>
+    <li>Validar se a lista de itens contém ID e nome preenchidos em cada produto.</li>
+  </ul>
+</div>
+<hr>
+<h3>Passo 6: Construir o Relatório de Funil de Compras Personalizado</h3>
+<p>Para enxergar onde os clientes estão desistindo:</p>
+<ol>
+<li>No menu lateral do GA4, clique em <strong>Explorar</strong> e crie uma <strong>Exploração em branco</strong>.</li>
+<li>Selecione a técnica <strong>Exploração do funil</strong>.</li>
+<li>Adicione as 5 etapas na ordem: <code>Visualização de item</code> → <code>Adição ao carrinho</code> → <code>Início de checkout</code> → <code>Compra</code>.</li>
+<li>Esse gráfico revelará se a maior perda ocorre na página de produto ou na etapa de cálculo de frete no checkout.</li>
+</ol>
+<figure class="article-figure">
+  <img src="/assets/images/posts/ga4-funnel-report.svg" alt="Gráfico de exploração de funil de compras no GA4 com taxas de abandono por etapa">
+  <figcaption><strong>Imagem 3:</strong> Relatório de exploração do funil de e-commerce no painel do GA4. <em>Fonte: Google Analytics 4 / Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<p>Para aprofundar-se nos schemas técnicos de comércio eletrônico, consulte a <a href="https://developers.google.com/analytics/devguides/collection/ga4/ecommerce">Documentação Oficial de E-commerce do GA4</a>.</p>
+<hr>
+<h2>Perguntas Frequentes sobre GA4 para E-commerce (FAQ)</h2>
+<h3>1. Por que o faturamento no GA4 nunca bate 100% com o gateway de pagamento?</h3>
+<p>Uma variação entre 5% e 10% é considerada normal no mercado devido a bloqueadores de anúncios de clientes, recargas de página ou pagamentos por boleto bancário pendentes de compensação. Se a divergência passar de 20%, há falha de implementação no Data Layer.</p>
+<h3>2. O GA4 rastreia compras feitas via boleto ou Pix não pago?</h3>
+<p>O GA4 registra a geração do pedido quando o cliente chega à tela final. Se você quiser medir apenas Pix e boletos efetivamente compensados, é necessário integrar um webhook de pós-venda via Measurement Protocol do servidor.</p>
+<h3>3. O que é o limiar de dados (Thresholding) no GA4?</h3>
+<p>Quando o Google Signals está ativado e o volume de acessos diários é baixo, o GA4 aplica um limiar de privacidade para impedir que usuários individuais sejam identificados. Isso oculta temporariamente algumas linhas em relatórios granulares.</p>
+<h3>4. É obrigatório enviar a matriz de produtos (<code>items</code>) em todas as conversões?</h3>
+<p>Não é obrigatório para registrar a receita total, mas é altamente recomendado para que você consiga analisar quais produtos e categorias geram maior margem de lucro por campanha de tráfego.</p>
+
+      </div>
+
+      <!-- In-Article Bottom Ad Slot -->
+      <div class="ad-slot-wrapper ad-slot-in-article">
+        <span class="ad-label">Publicidade</span>
+        <div class="ad-placeholder">
+          <span>Espaço para Anúncio AdSense (Responsivo / Multiplex)</span>
+        </div>
+      </div>
+
+      <footer class="author-box">
+        <div class="author-avatar">IP</div>
+        <div class="author-info">
+          <h4>Irmãos do Pixel</h4>
+          <span class="author-role">Especialistas em Mídia de Performance & Engenharia de Dados</span>
+          <p>Profissionais dedicados ao planejamento estratégico de campanhas no Meta Ads e Google Ads, rastreamento server-side e monetização de portais com Google AdSense.</p>
+        </div>
+      </footer>
+    </article>
+
+    <aside class="site-sidebar">
+  <!-- Widget: Cluster de Artigos -->
+  <div class="sidebar-widget">
+    <h3 class="widget-title">Cluster de Rastreamento</h3>
+    <ul class="cluster-list">
+      <li><a href="/blog/posts/como-instalar-api-conversoes-meta-ads">Como Instalar a API de Conversões do Meta Ads</a></li>
+      <li><a href="/blog/posts/guia-completo-google-tag-manager">Guia Completo do Google Tag Manager: Do Zero ao Avançado</a></li>
+      <li><a href="/blog/posts/como-configurar-ga4-ecommerce">Configuração do GA4 para E-commerce e Conversões</a></li>
+      <li><a href="/blog/posts/rastreamento-server-side-gtm-vale-a-pena">Rastreamento Server-Side no GTM: Vale a Pena?</a></li>
+      <li><a href="/blog/posts/como-elevar-event-match-quality-facebook">Como Elevar o Event Match Quality no Facebook</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget: AdSense Sidebar -->
+  <div class="ad-slot-wrapper ad-slot-sidebar">
+    <span class="ad-label">Publicidade</span>
+    <div class="ad-placeholder">
+      <span>Espaço para Anúncio AdSense (300x250 ou 300x600)</span>
+    </div>
+  </div>
+
+  <!-- Widget: Newsletter -->
+  <div class="sidebar-widget">
+    <span class="badge badge-brand" style="margin-bottom: 0.5rem;">Boletim Semanal</span>
+    <h3 class="widget-title" style="border: none; padding: 0; margin-bottom: 0.5rem;">Inteligência de Tráfego</h3>
+    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">
+      Receba análises técnicas sobre mudanças de algoritmos, APIs e estratégias de mídia de performance.
+    </p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição confirmada com sucesso!');">
+      <input type="email" placeholder="Seu melhor e-mail" required style="width: 100%; padding: 0.75rem; background: var(--bg-page); border: 1px solid var(--border-default); border-radius: var(--radius-sm); color: var(--text-primary); margin-bottom: 0.75rem; font-family: inherit; font-size: 0.9rem;">
+      <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 0.9rem;">Assinar Gratuitamente</button>
+    </form>
+  </div>
+</aside>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/blog" class="site-logo">
+          <div class="logo-pixels">
+            <span class="pixel-sq pixel-blue"></span>
+            <span class="pixel-sq pixel-orange"></span>
+            <span class="pixel-sq pixel-navy"></span>
+            <span class="pixel-sq pixel-muted"></span>
+          </div>
+          <span>Irmãos do Pixel</span>
+        </a>
+        <p>Agência e portal especializado em mídia de performance, mensuração de dados, API de Conversões do Meta Ads e monetização com Google AdSense.</p>
+        <p style="margin-top: 0.75rem;"><a href="/" style="color: var(--color-orange-500); font-weight: 600;">&larr; Acessar Site Oficial da Empresa</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="/blog">Início do Blog</a></li>
+          <li><a href="/blog#artigos">Artigos Técnicos</a></li>
+          <li><a href="/blog/sobre">Sobre a Equipe</a></li>
+          <li><a href="/blog/contato">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Especialidades</h5>
+        <ul>
+          <li><a href="/blog/posts/como-instalar-api-conversoes-meta-ads">Meta Ads & CAPI</a></li>
+          <li><a href="/blog#artigos">Google Ads & PMax</a></li>
+          <li><a href="/blog#artigos">Google Tag Manager</a></li>
+          <li><a href="/blog#artigos">Google Analytics 4</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/blog/sobre">Sobre Nós</a></li>
+          <li><a href="/blog/contato">Contato</a></li>
+          <li><a href="/blog/politica-de-privacidade">Política de Privacidade</a></li>
+          <li><a href="/blog/termos-de-uso">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-brand">Resultados construídos pixel por pixel.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="/blog/politica-de-privacidade" style="color: var(--text-muted);">Privacidade</a>
+        <a href="/blog/termos-de-uso" style="color: var(--text-muted);">Termos</a>
+        <span>&copy; 2026 Irmãos do Pixel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Banner de Consentimento de Cookies (Conformidade AdSense & LGPD) -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de Cookies">
+    <div class="cookie-text">
+      Utilizamos cookies e tecnologias semelhantes para analisar o tráfego, personalizar anúncios e aprimorar sua experiência de navegação, conforme detalhado em nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.
+    </div>
+    <div class="cookie-actions">
+      <button id="accept-cookies-btn" class="btn btn-primary btn-sm">Entendi e Aceito</button>
+      <a href="/politica-de-privacidade" style="font-size: 0.85rem; color: var(--text-on-dark-muted);">Saber mais</a>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

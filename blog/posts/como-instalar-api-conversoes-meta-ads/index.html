@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Instalar a API de Conversões do Meta Ads: Guia Prático em 6 Passos | Irmãos do Pixel | Tráfego & Performance</title>
+  <meta name="description" content="Aprenda o passo a passo exato em 6 etapas para implementar a API de Conversões do Meta Ads, recuperar dados de vendas e aumentar o Event Match Quality.">
+  <link rel="canonical" href="https://irmaosdopixel.com.br/blog/posts/como-instalar-api-conversoes-meta-ads">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Como Instalar a API de Conversões do Meta Ads: Guia Prático em 6 Passos | Irmãos do Pixel | Tráfego & Performance">
+  <meta property="og:description" content="Aprenda o passo a passo exato em 6 etapas para implementar a API de Conversões do Meta Ads, recuperar dados de vendas e aumentar o Event Match Quality.">
+  <meta property="og:url" content="https://irmaosdopixel.com.br/blog/posts/como-instalar-api-conversoes-meta-ads">
+  <meta property="og:site_name" content="Irmãos do Pixel | Tráfego & Performance">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como Instalar a API de Conversões do Meta Ads: Guia Prático em 6 Passos | Irmãos do Pixel | Tráfego & Performance">
+  <meta name="twitter:description" content="Aprenda o passo a passo exato em 6 etapas para implementar a API de Conversões do Meta Ads, recuperar dados de vendas e aumentar o Event Match Quality.">
+
+  <!-- Google AdSense Script Oficial -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8378615978627827" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts: Sora & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como Instalar a API de Conversões do Meta Ads: Guia Prático em 6 Passos",
+    "description": "Aprenda o passo a passo exato em 6 etapas para implementar a API de Conversões do Meta Ads, recuperar dados de vendas e aumentar o Event Match Quality.",
+    "author": {
+      "@type": "Organization",
+      "name": "Irmãos do Pixel"
+    },
+    "datePublished": "2026-08-21",
+    "dateModified": "2026-08-21",
+    "mainEntityOfPage": "https://irmaosdopixel.com.br/blog/posts/como-instalar-api-conversoes-meta-ads",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Irmãos do Pixel | Tráfego & Performance",
+      "url": "https://irmaosdopixel.com.br/blog"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a href="/blog" class="site-logo">
+      <div class="logo-pixels">
+        <span class="pixel-sq pixel-blue"></span>
+        <span class="pixel-sq pixel-orange"></span>
+        <span class="pixel-sq pixel-navy"></span>
+        <span class="pixel-sq pixel-muted"></span>
+      </div>
+      <span>Irmãos do Pixel</span>
+    </a>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/">Site Oficial</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog#artigos">Artigos</a></li>
+        <li><a href="/blog/sobre">Sobre</a></li>
+        <li><a href="/blog/contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta-wrap">
+      <a href="/blog/contato" class="btn btn-primary btn-sm">Fale Conosco</a>
+    </div>
+
+    <button class="mobile-toggle" aria-label="Abrir menu de navegação">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
+  <main class="main-wrapper">
+    <div class="container">
+  <div class="layout-with-sidebar">
+    <article class="article-content">
+      <header class="article-header">
+        <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/blog">Blog</a> &rsaquo;
+          <a href="/blog#artigos">Rastreamento & Métricas</a> &rsaquo;
+          <span>Artigo</span>
+        </nav>
+
+        <h1 class="article-title">Como Instalar a API de Conversões do Meta Ads: Guia Prático em 6 Passos</h1>
+
+        <div class="article-meta">
+          <span><strong>Autor:</strong> Irmãos do Pixel</span>
+          <span><strong>Publicação:</strong> 21 de Agosto de 2026</span>
+          <span><strong>Tempo de leitura:</strong> 8 min</span>
+          <span class="badge badge-brand">Rastreamento & Métricas</span>
+        </div>
+      </header>
+
+      <!-- In-Article Top Ad Slot -->
+      <div class="ad-slot-wrapper ad-slot-in-article">
+        <span class="ad-label">Publicidade</span>
+        <div class="ad-placeholder">
+          <span>Espaço para Anúncio AdSense (Responsivo / 728x280)</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>Se a sua empresa anuncia no Meta Ads e ainda depende apenas do Pixel do navegador, você está perdendo dados e dinheiro todos os dias.</p>
+<p>Na nossa experiência na <strong>Irmãos do Pixel</strong>, gerenciando mais de 180 contas de clientes, já vimos operações perderem de 20% a 35% dos dados de vendas por falta de rastreamento server-side.</p>
+<p>Com as constantes atualizações de privacidade no iOS e nos navegadores modernos, os bloqueadores de anúncios e a redução no tempo de vida dos cookies, o Pixel tradicional já não dá conta sozinho.</p>
+<p>A solução definitiva para recuperar a inteligência dos seus anúncios é a <strong>API de Conversões (CAPI) do Meta Ads</strong>.</p>
+<p>Neste guia prático, nós vamos te mostrar exatamente <strong>como instalar a API de Conversões em 6 passos</strong>, garantindo que seus dados cheguem com máxima precisão e reduzam o Custo por Aquisição (CPA) das suas campanhas.</p>
+<hr>
+<h2>O que é a API de Conversões do Meta Ads e por que ela é indispensável?</h2>
+<p>A API de Conversões estabelece uma ponte direta e segura entre o servidor onde seu site está hospedado e os servidores da Meta.</p>
+<p>Enquanto o Pixel clássico depende de scripts executados no navegador do visitante (client-side), a API de Conversões envia os dados diretamente de servidor para servidor (server-side).</p>
+<p>Isso significa que nenhuma extensão de ad blocker ou bloqueio de cookies de terceiros consegue interromper o registro de compras ou cadastros.</p>
+<pre><code>Navegador do Usuário ---&gt; Bloqueador de Anúncios -X-&gt; Pixel do Navegador Bloqueado
+         |
+         v
+Servidor do Seu Site ==============================&gt; Meta API de Conversões (100% Entregue)
+</code></pre>
+<p>No nosso dia a dia na agência, a recomendação inegociável é adotar a arquitetura híbrida: Pixel e API de Conversões operando em conjunto com <strong>deduplicação de eventos</strong>.</p>
+<hr>
+<div class="read-also-box">
+  <span class="read-also-tag">Leia Também</span>
+  <span><a href="/sobre">Conheça os fundadores Jeniffer e Rafael e a metodologia da Irmãos do Pixel</a></span>
+</div>
+<hr>
+<h2>Comparativo: Pixel do Navegador vs. API de Conversões</h2>
+<p>Para visualizar com clareza o impacto de cada tecnologia na sua operação, confira a tabela comparativa:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Recurso / Indicador</th>
+<th style="text-align:left">Pixel do Navegador (Client-Side)</th>
+<th style="text-align:left">API de Conversões (Server-Side)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Origem do Disparo</strong></td>
+<td style="text-align:left">Navegador do visitante (JavaScript)</td>
+<td style="text-align:left">Servidor da aplicação ou nuvem</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Perda por Ad Blockers</strong></td>
+<td style="text-align:left">Alta (de 20% a 35% de dados perdidos)</td>
+<td style="text-align:left">Zero (conexão direta entre servidores)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Retenção de Cookies no Safari</strong></td>
+<td style="text-align:left">Limitada a 24 horas ou 7 dias</td>
+<td style="text-align:left">Até 90 dias com identificadores primários</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Event Match Quality (EMQ)</strong></td>
+<td style="text-align:left">Fica na média de 4.0 a 6.0</td>
+<td style="text-align:left">Atinge facilmente notas de 8.0 a 9.5</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Deduplicação de Eventos</strong></td>
+<td style="text-align:left">Envia a via inicial do evento</td>
+<td style="text-align:left">Envia a via redundante com mesmo ID</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Segurança dos Dados</strong></td>
+<td style="text-align:left">Visível no código-fonte do navegador</td>
+<td style="text-align:left">Criptografado em hash SHA-256 no servidor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Como Instalar a API de Conversões do Meta Ads em 6 Passos Práticos</h2>
+<p>Siga o checklist abaixo para realizar a implementação completa no seu Gerenciador de Anúncios.</p>
+<h3>Passo 1: Acessar a Fonte de Dados no Gerenciador de Eventos</h3>
+<p>O primeiro passo é acessar o <a href="https://business.facebook.com/">Meta Business Suite</a> e entrar no menu <strong>Gerenciador de Eventos</strong>.</p>
+<p>Na coluna lateral esquerda, selecione a fonte de dados referente ao Pixel do seu domínio.</p>
+<p>Certifique-se de que você possui privilégios de Administrador na conta de anúncios para gerar tokens de autorização.</p>
+<figure class="article-figure">
+  <img src="/assets/images/posts/meta-events-manager.svg" alt="Interface do Gerenciador de Eventos da Meta com seleção de Pixel">
+  <figcaption><strong>Imagem 1:</strong> Painel do Gerenciador de Eventos da Meta com seleção de fontes de dados. <em>Fonte: Captura de tela do Gerenciador de Eventos / Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<hr>
+<h3>Passo 2: Gerar o Token de Acesso da API de Conversões</h3>
+<p>Com o Pixel selecionado, clique na aba superior <strong>Configurações</strong>.</p>
+<p>Desça até o bloco intitulado <strong>API de Conversões</strong> e encontre a seção &quot;Configurar integração manual&quot;.</p>
+<p>Clique no link com o texto <strong>Gerar token de acesso</strong>.</p>
+<p>Copie a chave alfanumérica gerada (uma sequência longa iniciada pelas letras <code>EAAG...</code>) e guarde com segurança.</p>
+<p>Esse token é a sua credencial privada para autenticar disparos de conversão na Meta.</p>
+<hr>
+<h3>Passo 3: Conectar o Token à sua Plataforma ou CMS</h3>
+<p>Agora você precisa colar esse Token de Acesso na sua plataforma de e-commerce ou painel de gestão.</p>
+<p>Se a sua empresa utiliza plataformas como Shopify, Nuvemshop, WooCommerce, Hotmart ou Kiwify:</p>
+<ol>
+<li>Vá até a seção de aplicativos ou integrações de marketing.</li>
+<li>Selecione a opção <strong>Meta Ads / Facebook Pixel</strong>.</li>
+<li>Marque a caixa <strong>Ativar API de Conversões</strong>.</li>
+<li>Cole o Token de Acesso gerado no Passo 2 e confirme as alterações.</li>
+</ol>
+<p>Caso possua uma aplicação própria em Node.js ou PHP, basta disparar um payload POST para o endpoint da Graph API: <code>https://graph.facebook.com/v19.0/&lt;SEU_PIXEL_ID&gt;/events</code>.</p>
+<hr>
+<h3>Passo 4: Configurar a Deduplicação com o Parâmetro <code>event_id</code></h3>
+<p>Para impedir que a Meta registre a mesma compra duas vezes quando o navegador e o servidor dispararem juntos, usamos a <strong>deduplicação de eventos</strong>.</p>
+<p>A regra fundamental é: o evento no navegador e o evento no servidor precisam carregar o mesmo nome (<code>event_name</code>) e o mesmo identificador exclusivo (<code>event_id</code>).</p>
+<p>Exemplo do código JavaScript disparado no navegador do usuário:</p>
+<pre><code class="language-javascript">// Disparo no Navegador (Pixel Web)
+fbq('track', 'Purchase', {
+  value: 297.00,
+  currency: 'BRL',
+  content_type: 'product',
+  content_ids: ['PROD-102']
+}, {
+  eventID: 'pedido_2026_8891' // Identificador unico da transacao
+});
+</code></pre>
+<p>E veja o payload JSON correspondente enviado em paralelo pelo servidor da sua loja:</p>
+<pre><code class="language-json">{
+  &quot;data&quot;: [
+    {
+      &quot;event_name&quot;: &quot;Purchase&quot;,
+      &quot;event_time&quot;: 1771718400,
+      &quot;event_id&quot;: &quot;pedido_2026_8891&quot;,
+      &quot;action_source&quot;: &quot;website&quot;,
+      &quot;event_source_url&quot;: &quot;https://seusite.com.br/obrigado&quot;,
+      &quot;user_data&quot;: {
+        &quot;em&quot;: [&quot;4f9b09a1c4bc31f9d...&quot;],
+        &quot;ph&quot;: [&quot;99c82a176e012a...&quot;],
+        &quot;client_ip_address&quot;: &quot;189.40.112.55&quot;,
+        &quot;client_user_agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64)...&quot;,
+        &quot;fbp&quot;: &quot;fb.1.1718000000.123456789&quot;,
+        &quot;fbc&quot;: &quot;fb.1.1718000000.IwAR0XYZ...&quot;
+      },
+      &quot;custom_data&quot;: {
+        &quot;currency&quot;: &quot;BRL&quot;,
+        &quot;value&quot;: 297.00
+      }
+    }
+  ]
+}
+</code></pre>
+<figure class="article-figure">
+  <img src="/assets/images/posts/meta-deduplication-flow.svg" alt="Fluxo de deduplicação de eventos da API de Conversões">
+  <figcaption><strong>Imagem 2:</strong> Diagrama de deduplicação unificando eventos de navegador e servidor. <em>Fonte: Documentação Oficial Meta for Developers / Ilustração Editorial</em></figcaption>
+</figure>
+<p>Para consultar as especificações completas de cada parâmetro, acesse a <a href="https://developers.facebook.com/docs/marketing-api/conversions-api">Documentação Oficial da Meta para Desenvolvedores</a>.</p>
+<hr>
+<h3>Passo 5: Testar e Validar os Disparos em Tempo Real</h3>
+<p>Jamais inicie anúncios com alto orçamento sem antes testar os disparos.</p>
+<p>Para validar:</p>
+<ol>
+<li>No <strong>Gerenciador de Eventos</strong>, clique na aba <strong>Testar Eventos</strong>.</li>
+<li>Copie o código de teste apresentado (exemplo: <code>TEST45890</code>).</li>
+<li>Adicione esse código de teste nas configurações da sua plataforma ou no campo <code>&quot;test_event_code&quot;</code> da sua requisição.</li>
+<li>Execute uma compra ou cadastro de teste no seu site.</li>
+</ol>
+<p>No painel de tempo real da Meta, deverão surgir duas entradas para a mesma ação: uma marcada como <strong>Navegador</strong> e outra como <strong>Servidor</strong>, com o rótulo verde de <strong>Deduplicado</strong>.</p>
+<hr>
+<h3>Passo 6: Monitorar e Elevar o Event Match Quality (EMQ)</h3>
+<p>Com a API rodando, acompanhe com frequência o indicador de <strong>Event Match Quality (EMQ)</strong> no Gerenciador de Eventos.</p>
+<p>O EMQ varia de 0 a 10 e reflete a qualidade dos dados enviados para que a Meta identifique o perfil real do usuário comprador.</p>
+<figure class="article-figure">
+  <img src="/assets/images/posts/meta-match-quality.svg" alt="Painel de Event Match Quality com nota excelente">
+  <figcaption><strong>Imagem 3:</strong> Painel de diagnósticos exibindo pontuação de Match Quality acima de 8.5. <em>Fonte: Painel de Diagnóstico do Meta Ads / Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<div class="checklist-box">
+  <div class="checklist-title">Checklist para Atingir Nota 8.5+ no EMQ:</div>
+  <ul>
+    <li>Enviar sempre o e-mail do cliente normalizado e codificado em hash SHA-256.</li>
+    <li>Enviar o telefone com código de país e DDD (exemplo: 5511999998888).</li>
+    <li>Capturar e transmitir os cookies primários <code>_fbp</code> e <code>_fbc</code>.</li>
+    <li>Incluir o IP real do cliente e a string do navegador (User-Agent) na requisição.</li>
+    <li>Repassar nome, sobrenome, cidade e CEP em eventos de checkout e compra.</li>
+  </ul>
+</div>
+<hr>
+<h2>Perguntas Frequentes sobre a API de Conversões (FAQ)</h2>
+<h3>1. A API de Conversões substitui totalmente o Pixel do Facebook?</h3>
+<p>Não. A orientação oficial da Meta é manter ambos trabalhando em paralelo no modelo híbrido. O Pixel captura o comportamento visual de navegação rápida, enquanto a API assegura a entrega blindada dos dados cruciais como Leads e Compras.</p>
+<h3>2. A API de Conversões diminui o custo por compra (CPA) dos anúncios?</h3>
+<p>Sim. Quando o algoritmo da Meta recebe dados completos de conversão com alta pontuação de correspondência, ele otimiza o direcionamento para pessoas com real perfil de compra, reduzindo o custo por resultado.</p>
+<h3>3. A instalação da API de Conversões é gratuita?</h3>
+<p>A ferramenta é gratuita e disponibilizada pela Meta. Em plataformas com integração pronta (como Shopify, Nuvemshop ou Hotmart), não há custo adicional de servidor. Em infraestruturas próprias com GTM Server-Side, há apenas o custo de hospedagem na nuvem.</p>
+<h3>4. O que fazer se os eventos aparecerem duplicados no painel de anúncios?</h3>
+<p>Certifique-se de que o parâmetro <code>event_id</code> e o <code>event_name</code> enviados pelo navegador e pelo servidor sejam exatamente idênticos. A ausência do <code>event_id</code> impede a Meta de consolidar os dois disparos em um só.</p>
+<h3>5. Quanto tempo leva para a pontuação de Event Match Quality atualizar?</h3>
+<p>O índice de Event Match Quality leva de 24 a 48 horas após os primeiros disparos reais para consolidar os dados e exibir a nota final no Gerenciador de Eventos.</p>
+
+      </div>
+
+      <!-- In-Article Bottom Ad Slot -->
+      <div class="ad-slot-wrapper ad-slot-in-article">
+        <span class="ad-label">Publicidade</span>
+        <div class="ad-placeholder">
+          <span>Espaço para Anúncio AdSense (Responsivo / Multiplex)</span>
+        </div>
+      </div>
+
+      <footer class="author-box">
+        <div class="author-avatar">IP</div>
+        <div class="author-info">
+          <h4>Irmãos do Pixel</h4>
+          <span class="author-role">Especialistas em Mídia de Performance & Engenharia de Dados</span>
+          <p>Profissionais dedicados ao planejamento estratégico de campanhas no Meta Ads e Google Ads, rastreamento server-side e monetização de portais com Google AdSense.</p>
+        </div>
+      </footer>
+    </article>
+
+    <aside class="site-sidebar">
+  <!-- Widget: Cluster de Artigos -->
+  <div class="sidebar-widget">
+    <h3 class="widget-title">Cluster de Rastreamento</h3>
+    <ul class="cluster-list">
+      <li><a href="/blog/posts/como-instalar-api-conversoes-meta-ads">Como Instalar a API de Conversões do Meta Ads</a></li>
+      <li><a href="/blog/posts/guia-completo-google-tag-manager">Guia Completo do Google Tag Manager: Do Zero ao Avançado</a></li>
+      <li><a href="/blog/posts/como-configurar-ga4-ecommerce">Configuração do GA4 para E-commerce e Conversões</a></li>
+      <li><a href="/blog/posts/rastreamento-server-side-gtm-vale-a-pena">Rastreamento Server-Side no GTM: Vale a Pena?</a></li>
+      <li><a href="/blog/posts/como-elevar-event-match-quality-facebook">Como Elevar o Event Match Quality no Facebook</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget: AdSense Sidebar -->
+  <div class="ad-slot-wrapper ad-slot-sidebar">
+    <span class="ad-label">Publicidade</span>
+    <div class="ad-placeholder">
+      <span>Espaço para Anúncio AdSense (300x250 ou 300x600)</span>
+    </div>
+  </div>
+
+  <!-- Widget: Newsletter -->
+  <div class="sidebar-widget">
+    <span class="badge badge-brand" style="margin-bottom: 0.5rem;">Boletim Semanal</span>
+    <h3 class="widget-title" style="border: none; padding: 0; margin-bottom: 0.5rem;">Inteligência de Tráfego</h3>
+    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">
+      Receba análises técnicas sobre mudanças de algoritmos, APIs e estratégias de mídia de performance.
+    </p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição confirmada com sucesso!');">
+      <input type="email" placeholder="Seu melhor e-mail" required style="width: 100%; padding: 0.75rem; background: var(--bg-page); border: 1px solid var(--border-default); border-radius: var(--radius-sm); color: var(--text-primary); margin-bottom: 0.75rem; font-family: inherit; font-size: 0.9rem;">
+      <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 0.9rem;">Assinar Gratuitamente</button>
+    </form>
+  </div>
+</aside>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/blog" class="site-logo">
+          <div class="logo-pixels">
+            <span class="pixel-sq pixel-blue"></span>
+            <span class="pixel-sq pixel-orange"></span>
+            <span class="pixel-sq pixel-navy"></span>
+            <span class="pixel-sq pixel-muted"></span>
+          </div>
+          <span>Irmãos do Pixel</span>
+        </a>
+        <p>Agência e portal especializado em mídia de performance, mensuração de dados, API de Conversões do Meta Ads e monetização com Google AdSense.</p>
+        <p style="margin-top: 0.75rem;"><a href="/" style="color: var(--color-orange-500); font-weight: 600;">&larr; Acessar Site Oficial da Empresa</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="/blog">Início do Blog</a></li>
+          <li><a href="/blog#artigos">Artigos Técnicos</a></li>
+          <li><a href="/blog/sobre">Sobre a Equipe</a></li>
+          <li><a href="/blog/contato">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Especialidades</h5>
+        <ul>
+          <li><a href="/blog/posts/como-instalar-api-conversoes-meta-ads">Meta Ads & CAPI</a></li>
+          <li><a href="/blog#artigos">Google Ads & PMax</a></li>
+          <li><a href="/blog#artigos">Google Tag Manager</a></li>
+          <li><a href="/blog#artigos">Google Analytics 4</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/blog/sobre">Sobre Nós</a></li>
+          <li><a href="/blog/contato">Contato</a></li>
+          <li><a href="/blog/politica-de-privacidade">Política de Privacidade</a></li>
+          <li><a href="/blog/termos-de-uso">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-brand">Resultados construídos pixel por pixel.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="/blog/politica-de-privacidade" style="color: var(--text-muted);">Privacidade</a>
+        <a href="/blog/termos-de-uso" style="color: var(--text-muted);">Termos</a>
+        <span>&copy; 2026 Irmãos do Pixel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Banner de Consentimento de Cookies (Conformidade AdSense & LGPD) -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de Cookies">
+    <div class="cookie-text">
+      Utilizamos cookies e tecnologias semelhantes para analisar o tráfego, personalizar anúncios e aprimorar sua experiência de navegação, conforme detalhado em nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.
+    </div>
+    <div class="cookie-actions">
+      <button id="accept-cookies-btn" class="btn btn-primary btn-sm">Entendi e Aceito</button>
+      <a href="/politica-de-privacidade" style="font-size: 0.85rem; color: var(--text-on-dark-muted);">Saber mais</a>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

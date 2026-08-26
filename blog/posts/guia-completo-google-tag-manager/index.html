@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Completo do Google Tag Manager: Do Zero aos Eventos Avançados em 7 Passos | Irmãos do Pixel | Tráfego & Performance</title>
+  <meta name="description" content="Aprenda a dominar o Google Tag Manager (GTM) em 7 passos práticos para instalar pixels, criar acionadores e rastrear conversões sem depender de programadores.">
+  <link rel="canonical" href="https://irmaosdopixel.com.br/blog/posts/guia-completo-google-tag-manager">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Guia Completo do Google Tag Manager: Do Zero aos Eventos Avançados em 7 Passos | Irmãos do Pixel | Tráfego & Performance">
+  <meta property="og:description" content="Aprenda a dominar o Google Tag Manager (GTM) em 7 passos práticos para instalar pixels, criar acionadores e rastrear conversões sem depender de programadores.">
+  <meta property="og:url" content="https://irmaosdopixel.com.br/blog/posts/guia-completo-google-tag-manager">
+  <meta property="og:site_name" content="Irmãos do Pixel | Tráfego & Performance">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guia Completo do Google Tag Manager: Do Zero aos Eventos Avançados em 7 Passos | Irmãos do Pixel | Tráfego & Performance">
+  <meta name="twitter:description" content="Aprenda a dominar o Google Tag Manager (GTM) em 7 passos práticos para instalar pixels, criar acionadores e rastrear conversões sem depender de programadores.">
+
+  <!-- Google AdSense Script Oficial -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8378615978627827" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts: Sora & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Guia Completo do Google Tag Manager: Do Zero aos Eventos Avançados em 7 Passos",
+    "description": "Aprenda a dominar o Google Tag Manager (GTM) em 7 passos práticos para instalar pixels, criar acionadores e rastrear conversões sem depender de programadores.",
+    "author": {
+      "@type": "Organization",
+      "name": "Irmãos do Pixel"
+    },
+    "datePublished": "2026-08-21",
+    "dateModified": "2026-08-21",
+    "mainEntityOfPage": "https://irmaosdopixel.com.br/blog/posts/guia-completo-google-tag-manager",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Irmãos do Pixel | Tráfego & Performance",
+      "url": "https://irmaosdopixel.com.br/blog"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a href="/blog" class="site-logo">
+      <div class="logo-pixels">
+        <span class="pixel-sq pixel-blue"></span>
+        <span class="pixel-sq pixel-orange"></span>
+        <span class="pixel-sq pixel-navy"></span>
+        <span class="pixel-sq pixel-muted"></span>
+      </div>
+      <span>Irmãos do Pixel</span>
+    </a>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/">Site Oficial</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog#artigos">Artigos</a></li>
+        <li><a href="/blog/sobre">Sobre</a></li>
+        <li><a href="/blog/contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta-wrap">
+      <a href="/blog/contato" class="btn btn-primary btn-sm">Fale Conosco</a>
+    </div>
+
+    <button class="mobile-toggle" aria-label="Abrir menu de navegação">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
+  <main class="main-wrapper">
+    <div class="container">
+  <div class="layout-with-sidebar">
+    <article class="article-content">
+      <header class="article-header">
+        <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/blog">Blog</a> &rsaquo;
+          <a href="/blog#artigos">Rastreamento & Métricas</a> &rsaquo;
+          <span>Artigo</span>
+        </nav>
+
+        <h1 class="article-title">Guia Completo do Google Tag Manager: Do Zero aos Eventos Avançados em 7 Passos</h1>
+
+        <div class="article-meta">
+          <span><strong>Autor:</strong> Irmãos do Pixel</span>
+          <span><strong>Publicação:</strong> 21 de Agosto de 2026</span>
+          <span><strong>Tempo de leitura:</strong> 9 min</span>
+          <span class="badge badge-brand">Rastreamento & Métricas</span>
+        </div>
+      </header>
+
+      <!-- In-Article Top Ad Slot -->
+      <div class="ad-slot-wrapper ad-slot-in-article">
+        <span class="ad-label">Publicidade</span>
+        <div class="ad-placeholder">
+          <span>Espaço para Anúncio AdSense (Responsivo / 728x280)</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>Se toda vez que você precisa instalar um pixel de anúncio ou medir um clique de botão você precisa acionar um desenvolvedor, a sua operação de marketing está atrasada.</p>
+<p>Na nossa rotina técnica na <strong>Irmãos do Pixel</strong>, o <strong>Google Tag Manager (GTM)</strong> é a espinha dorsal de qualquer projeto de tráfego pago, seja para contas locais, e-commerces ou lançamentos de infoprodutos.</p>
+<p>O GTM funciona como uma central de comando onde você gerencia todas as tags de mensuração (Meta Pixel, Google Ads, GA4, TikTok Ads e Clarity) em uma única interface amigável, rápida e segura.</p>
+<p>Neste guia definitivo, nós vamos te ensinar <strong>como dominar o Google Tag Manager em 7 passos práticos</strong>, saindo da instalação básica até a captura de eventos avançados com Data Layer.</p>
+<hr>
+<h2>Como Funciona a Tríade do Google Tag Manager: Tags, Acionadores e Variáveis</h2>
+<p>Para compreender o GTM sem complicações, você só precisa entender a relação entre três elementos essenciais:</p>
+<ol>
+<li><strong>Tags (O que disparar)</strong>: O código ou script que envia as informações para as ferramentas externas (exemplo: Tag do Pixel da Meta ou Tag de Conversão do Google Ads).</li>
+<li><strong>Acionadores (Quando disparar)</strong>: A condição ou evento que determina o momento exato do disparo (exemplo: clique no botão de WhatsApp, envio de formulário ou carregamento de página de obrigado).</li>
+<li><strong>Variáveis (Informações auxiliares)</strong>: Valores dinâmicos utilizados pelas tags e acionadores (exemplo: valor da compra, URL da página, ID do produto ou texto do botão clicado).</li>
+</ol>
+<pre><code>[Visitante Clica no WhatsApp] ---&gt; [Acionador de Clique Ativado] ---&gt; [Tag do Meta e GA4 Dispara Conversão]
+</code></pre>
+<hr>
+<div class="read-also-box">
+  <span class="read-also-tag">Leia Também</span>
+  <span><a href="/blog/posts/como-estruturar-google-ads-negocios-locais">Confira nosso guia em 5 etapas para estruturar campanhas locais de alta conversão no Google Ads</a></span>
+</div>
+<hr>
+<h2>Comparativo: Rastreamento com GTM vs. Instalação Manual no Código</h2>
+<p>Analisar os dois modelos deixa claro por que o GTM se tornou o padrão absoluto do mercado:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Critério de Análise</th>
+<th style="text-align:left">Instalação Manual no Código</th>
+<th style="text-align:left">Gerenciamento via Google Tag Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Velocidade de Implementação</strong></td>
+<td style="text-align:left">Lenta (depende de abertura de chamados técnicos)</td>
+<td style="text-align:left">Instantânea (publicação em poucos minutos pelo gestor)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Risco de Quebra do Site</strong></td>
+<td style="text-align:left">Alto (edição direta nos arquivos de template)</td>
+<td style="text-align:left">Mínimo (isolamento em container com versionamento)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Impacto no Tempo de Carregamento</strong></td>
+<td style="text-align:left">Pesado (múltiplos scripts carregando em série)</td>
+<td style="text-align:left">Otimizado (carregamento assíncrono gerenciado)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Testes e Depuração</strong></td>
+<td style="text-align:left">Difícil (requer inspeção manual de rede no console)</td>
+<td style="text-align:left">Muito fácil (modo de visualização e depuração em tempo real)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Histórico de Alterações</strong></td>
+<td style="text-align:left">Quase inexistente em CMSs convencionais</td>
+<td style="text-align:left">Versionamento completo com botão de reversão imediata</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Passo a Passo para Dominar o GTM em 7 Etapas</h2>
+<p>Siga as etapas abaixo para configurar seu container do zero até a mensuração de conversões reais.</p>
+<h3>Passo 1: Criar Conta e Container no Google Tag Manager</h3>
+<ol>
+<li>Acesse o portal oficial do <a href="https://tagmanager.google.com/">Google Tag Manager</a> com a sua conta Google corporativa.</li>
+<li>Clique no botão <strong>Criar conta</strong>.</li>
+<li>Preencha o nome da sua empresa, escolha o país Brasil e defina o nome do container (geralmente o domínio do seu site, como <code>seusite.com.br</code>).</li>
+<li>Na opção de plataforma-alvo, selecione <strong>Web</strong>.</li>
+</ol>
+<hr>
+<h3>Passo 2: Instalar os Códigos do Container no Site</h3>
+<p>Ao criar o container, o GTM fornecerá dois blocos de código:</p>
+<ul>
+<li>O primeiro trecho em JavaScript deve ser colado o mais alto possível dentro da tag <code>&lt;head&gt;</code> de todas as páginas do site.</li>
+<li>O segundo trecho em <code>&lt;noscript&gt;</code> deve ser inserido logo após a abertura da tag <code>&lt;body&gt;</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;!-- Google Tag Manager - Header --&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+</code></pre>
+<figure class="article-figure">
+  <img src="/assets/images/posts/gtm-install-code.svg" alt="Painel do Google Tag Manager exibindo os códigos de instalação no header e body">
+  <figcaption><strong>Imagem 1:</strong> Snippet oficial de instalação do container do Google Tag Manager. <em>Fonte: Documentação Oficial Google Tag Manager / Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<hr>
+<h3>Passo 3: Habilitar as Variáveis Integradas de Cliques e Formulários</h3>
+<p>Por padrão, muitas variáveis úteis vêm desativadas no GTM.</p>
+<p>Para habilitá-las:</p>
+<ol>
+<li>No menu lateral esquerdo, clique em <strong>Variáveis</strong>.</li>
+<li>No quadrante superior &quot;Variáveis integradas&quot;, clique em <strong>Configurar</strong>.</li>
+<li>Marque todas as opções dos blocos <strong>Páginas</strong>, <strong>Utilitários</strong>, <strong>Erros</strong>, <strong>Cliques</strong> (Click Element, Click Classes, Click ID, Click Target, Click URL, Click Text) e <strong>Formulários</strong> (Form Classes, Form ID, Form Target, Form URL, Form Text).</li>
+</ol>
+<p>Isso permitirá capturar qualquer botão pelo seu texto ou link de destino.</p>
+<hr>
+<h3>Passo 4: Criar a Tag Base do Pixel do Meta Ads e GA4</h3>
+<p>Agora vamos instalar a tag que rastreia todas as visualizações de página (Pageview):</p>
+<ol>
+<li>Vá em <strong>Tags</strong> e clique em <strong>Nova</strong>.</li>
+<li>Nomeie a tag como <code>GA4 - Configuração Base</code>.</li>
+<li>Escolha o tipo de tag <strong>Google Analytics: tag do Google</strong>.</li>
+<li>Insira seu ID de métrica (exemplo: <code>G-XXXXXXXXXX</code>).</li>
+<li>No bloco de acionamento, selecione o acionador padrão <strong>Initialization - All Pages</strong> ou <strong>All Pages</strong>.</li>
+<li>Salve a tag.</li>
+</ol>
+<p>Repita o procedimento para criar a tag HTML personalizada com o código base do Pixel da Meta.</p>
+<hr>
+<h3>Passo 5: Criar um Acionador de Clique para o Botão de WhatsApp</h3>
+<p>Para registrar uma conversão sempre que um visitante clicar no botão de WhatsApp:</p>
+<ol>
+<li>No menu <strong>Acionadores</strong>, clique em <strong>Novo</strong>.</li>
+<li>Nomeie como <code>Acionador - Clique WhatsApp</code>.</li>
+<li>Escolha o tipo <strong>Apenas links</strong> (ou Todos os elementos).</li>
+<li>Marque a opção de disparo em &quot;Alguns cliques em links&quot;.</li>
+<li>Defina a regra: <code>Click URL</code> &gt; <code>contém</code> &gt; <code>wa.me</code> (ou <code>api.whatsapp.com</code>).</li>
+<li>Salve o acionador.</li>
+</ol>
+<figure class="article-figure">
+  <img src="/assets/images/posts/gtm-trigger-whatsapp.svg" alt="Configuração de acionador de clique em link de WhatsApp no GTM">
+  <figcaption><strong>Imagem 2:</strong> Configuração do acionador de links com filtro condicional para WhatsApp. <em>Fonte: Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<hr>
+<h3>Passo 6: Conectar a Tag de Evento de Conversão ao Acionador</h3>
+<p>Agora que o acionador existe, vamos criar a tag que envia o evento de Lead quando o clique ocorrer:</p>
+<ol>
+<li>Vá em <strong>Tags</strong> &gt; <strong>Nova</strong> e nomeie como <code>Meta Pixel - Evento Lead WhatsApp</code>.</li>
+<li>Escolha <strong>HTML Personalizado</strong> e insira:<pre><code class="language-html">&lt;script&gt;
+  fbq('track', 'Lead', {
+    content_name: 'Contato via WhatsApp',
+    status: 'Iniciado'
+  });
+&lt;/script&gt;
+</code></pre>
+</li>
+<li>No acionamento, vincule o <code>Acionador - Clique WhatsApp</code> criado na etapa anterior.</li>
+</ol>
+<div class="checklist-box">
+  <div class="checklist-title">Checklist de Validação de Tags no GTM:</div>
+  <ul>
+    <li>Abrir o Modo de Visualização (Preview / Tag Assistant).</li>
+    <li>Digitar a URL do seu site e conectar o navegador de testes.</li>
+    <li>Clicar no botão desejado e conferir se o evento surge na coluna lateral.</li>
+    <li>Verificar se a tag passou para a seção "Tags Fired".</li>
+  </ul>
+</div>
+<hr>
+<h3>Passo 7: Testar no Modo de Visualização e Publicar as Alterações</h3>
+<p>O GTM não atualiza o site automaticamente ao salvar tags: você deve gerar uma nova versão publicada.</p>
+<ol>
+<li>Clique no botão azul superior <strong>Visualizar</strong> para testar tudo em ambiente simulado.</li>
+<li>Após confirmar que as tags disparam apenas nas condições certas, feche a aba de teste.</li>
+<li>No painel do GTM, clique no botão azul <strong>Enviar</strong>.</li>
+<li>Insira um nome descritivo para a versão (exemplo: <code>v1 - Tags Base e Rastreamento WhatsApp</code>).</li>
+<li>Clique em <strong>Publicar</strong>.</li>
+</ol>
+<figure class="article-figure">
+  <img src="/assets/images/posts/gtm-preview-mode.svg" alt="Painel do Tag Assistant no modo de visualização exibindo as tags disparadas com sucesso">
+  <figcaption><strong>Imagem 3:</strong> Interface do Google Tag Assistant validando o disparo correto das tags de conversão. <em>Fonte: Google Tag Assistant / Acervo Irmãos do Pixel</em></figcaption>
+</figure>
+<p>Para consultar as especificações completas de eventos do GA4 e GTM, consulte a <a href="https://developers.google.com/tag-platform/tag-manager">Documentação de Desenvolvedores do Google</a>.</p>
+<hr>
+<h2>Perguntas Frequentes sobre Google Tag Manager (FAQ)</h2>
+<h3>1. O Google Tag Manager deixa o site mais lento?</h3>
+<p>Não, desde que instalado corretamente. O GTM carrega de forma assíncrona, o que significa que o conteúdo visual da página continua sendo renderizado normalmente sem travar a tela enquanto os scripts analíticos são processados em segundo plano.</p>
+<h3>2. Posso usar o GTM junto com a API de Conversões do Meta?</h3>
+<p>Sim, com certeza. Você pode usar o GTM Web tradicional para disparar os eventos do navegador com <code>event_id</code> e utilizar o GTM Server-Side ou backend da loja para enviar a via redundante no servidor.</p>
+<h3>3. O que acontece se eu esquecer de clicar em Publicar no GTM?</h3>
+<p>Suas alterações permanecerão salvas apenas como rascunho no painel administrativo e não terão nenhum efeito sobre o site real até que você clique em Enviar e confirme a publicação da versão.</p>
+<h3>4. Quantas tags posso colocar dentro de um mesmo container?</h3>
+<p>Não existe um limite fixo de quantidade de tags, mas a recomendação de boas práticas é manter apenas tags ativas e remover ferramentas antigas de testes para preservar a organização e a governança de dados da empresa.</p>
+
+      </div>
+
+      <!-- In-Article Bottom Ad Slot -->
+      <div class="ad-slot-wrapper ad-slot-in-article">
+        <span class="ad-label">Publicidade</span>
+        <div class="ad-placeholder">
+          <span>Espaço para Anúncio AdSense (Responsivo / Multiplex)</span>
+        </div>
+      </div>
+
+      <footer class="author-box">
+        <div class="author-avatar">IP</div>
+        <div class="author-info">
+          <h4>Irmãos do Pixel</h4>
+          <span class="author-role">Especialistas em Mídia de Performance & Engenharia de Dados</span>
+          <p>Profissionais dedicados ao planejamento estratégico de campanhas no Meta Ads e Google Ads, rastreamento server-side e monetização de portais com Google AdSense.</p>
+        </div>
+      </footer>
+    </article>
+
+    <aside class="site-sidebar">
+  <!-- Widget: Cluster de Artigos -->
+  <div class="sidebar-widget">
+    <h3 class="widget-title">Cluster de Rastreamento</h3>
+    <ul class="cluster-list">
+      <li><a href="/blog/posts/como-instalar-api-conversoes-meta-ads">Como Instalar a API de Conversões do Meta Ads</a></li>
+      <li><a href="/blog/posts/guia-completo-google-tag-manager">Guia Completo do Google Tag Manager: Do Zero ao Avançado</a></li>
+      <li><a href="/blog/posts/como-configurar-ga4-ecommerce">Configuração do GA4 para E-commerce e Conversões</a></li>
+      <li><a href="/blog/posts/rastreamento-server-side-gtm-vale-a-pena">Rastreamento Server-Side no GTM: Vale a Pena?</a></li>
+      <li><a href="/blog/posts/como-elevar-event-match-quality-facebook">Como Elevar o Event Match Quality no Facebook</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget: AdSense Sidebar -->
+  <div class="ad-slot-wrapper ad-slot-sidebar">
+    <span class="ad-label">Publicidade</span>
+    <div class="ad-placeholder">
+      <span>Espaço para Anúncio AdSense (300x250 ou 300x600)</span>
+    </div>
+  </div>
+
+  <!-- Widget: Newsletter -->
+  <div class="sidebar-widget">
+    <span class="badge badge-brand" style="margin-bottom: 0.5rem;">Boletim Semanal</span>
+    <h3 class="widget-title" style="border: none; padding: 0; margin-bottom: 0.5rem;">Inteligência de Tráfego</h3>
+    <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">
+      Receba análises técnicas sobre mudanças de algoritmos, APIs e estratégias de mídia de performance.
+    </p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição confirmada com sucesso!');">
+      <input type="email" placeholder="Seu melhor e-mail" required style="width: 100%; padding: 0.75rem; background: var(--bg-page); border: 1px solid var(--border-default); border-radius: var(--radius-sm); color: var(--text-primary); margin-bottom: 0.75rem; font-family: inherit; font-size: 0.9rem;">
+      <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 0.9rem;">Assinar Gratuitamente</button>
+    </form>
+  </div>
+</aside>
+
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/blog" class="site-logo">
+          <div class="logo-pixels">
+            <span class="pixel-sq pixel-blue"></span>
+            <span class="pixel-sq pixel-orange"></span>
+            <span class="pixel-sq pixel-navy"></span>
+            <span class="pixel-sq pixel-muted"></span>
+          </div>
+          <span>Irmãos do Pixel</span>
+        </a>
+        <p>Agência e portal especializado em mídia de performance, mensuração de dados, API de Conversões do Meta Ads e monetização com Google AdSense.</p>
+        <p style="margin-top: 0.75rem;"><a href="/" style="color: var(--color-orange-500); font-weight: 600;">&larr; Acessar Site Oficial da Empresa</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="/blog">Início do Blog</a></li>
+          <li><a href="/blog#artigos">Artigos Técnicos</a></li>
+          <li><a href="/blog/sobre">Sobre a Equipe</a></li>
+          <li><a href="/blog/contato">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Especialidades</h5>
+        <ul>
+          <li><a href="/blog/posts/como-instalar-api-conversoes-meta-ads">Meta Ads & CAPI</a></li>
+          <li><a href="/blog#artigos">Google Ads & PMax</a></li>
+          <li><a href="/blog#artigos">Google Tag Manager</a></li>
+          <li><a href="/blog#artigos">Google Analytics 4</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/blog/sobre">Sobre Nós</a></li>
+          <li><a href="/blog/contato">Contato</a></li>
+          <li><a href="/blog/politica-de-privacidade">Política de Privacidade</a></li>
+          <li><a href="/blog/termos-de-uso">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-brand">Resultados construídos pixel por pixel.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="/blog/politica-de-privacidade" style="color: var(--text-muted);">Privacidade</a>
+        <a href="/blog/termos-de-uso" style="color: var(--text-muted);">Termos</a>
+        <span>&copy; 2026 Irmãos do Pixel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Banner de Consentimento de Cookies (Conformidade AdSense & LGPD) -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de Cookies">
+    <div class="cookie-text">
+      Utilizamos cookies e tecnologias semelhantes para analisar o tráfego, personalizar anúncios e aprimorar sua experiência de navegação, conforme detalhado em nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.
+    </div>
+    <div class="cookie-actions">
+      <button id="accept-cookies-btn" class="btn btn-primary btn-sm">Entendi e Aceito</button>
+      <a href="/politica-de-privacidade" style="font-size: 0.85rem; color: var(--text-on-dark-muted);">Saber mais</a>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

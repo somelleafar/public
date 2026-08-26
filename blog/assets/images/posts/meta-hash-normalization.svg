@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Pipeline de Normalização de Dados e Hash SHA-256 (Meta CAPI)</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#10B981" opacity="0.2"/>
+    <text x="905" y="29" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">CRIPTOGRAFIA SHA-256</text>
+  
+      
+      <!-- Stage 1: Raw Input -->
+      <rect x="50" y="100" width="260" height="360" rx="10" fill="#1E293B" stroke="#EF4444"/>
+      <text x="180" y="140" fill="#EF4444" font-family="Sora" font-size="16" font-weight="700" text-anchor="middle">1. Dado Bruto Digitado</text>
+      
+      <rect x="70" y="170" width="220" height="70" rx="6" fill="#0F172A"/>
+      <text x="85" y="195" fill="#94A3B8" font-family="Inter" font-size="11">E-mail com espaços e maiúsculas:</text>
+      <text x="85" y="222" fill="#EF4444" font-family="JetBrains Mono" font-size="11">" Lucas.Mendes@Site.com "</text>
+
+      <rect x="70" y="260" width="220" height="70" rx="6" fill="#0F172A"/>
+      <text x="85" y="285" fill="#94A3B8" font-family="Inter" font-size="11">Telefone com traços e parênteses:</text>
+      <text x="85" y="312" fill="#EF4444" font-family="JetBrains Mono" font-size="11">"(11) 99999-8888"</text>
+
+      <text x="180" y="420" fill="#EF4444" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">&#10007; Se enviado assim, falha o match</text>
+
+      <!-- Stage 2: Sanitization -->
+      <rect x="370" y="100" width="260" height="360" rx="10" fill="#1E293B" stroke="#F59E0B"/>
+      <text x="500" y="140" fill="#F59E0B" font-family="Sora" font-size="16" font-weight="700" text-anchor="middle">2. Sanitização no Backend</text>
+      
+      <rect x="390" y="170" width="220" height="70" rx="6" fill="#0F172A"/>
+      <text x="405" y="195" fill="#94A3B8" font-family="Inter" font-size="11">.trim() e .toLowerCase():</text>
+      <text x="405" y="222" fill="#F59E0B" font-family="JetBrains Mono" font-size="11">"lucas.mendes@site.com"</text>
+
+      <rect x="390" y="260" width="220" height="70" rx="6" fill="#0F172A"/>
+      <text x="405" y="285" fill="#94A3B8" font-family="Inter" font-size="11">Apenas números + DDI 55:</text>
+      <text x="405" y="312" fill="#F59E0B" font-family="JetBrains Mono" font-size="11">"5511999998888"</text>
+
+      <text x="500" y="420" fill="#F59E0B" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">&#8635; Formato padronizado Meta</text>
+
+      <!-- Stage 3: SHA-256 Output -->
+      <rect x="690" y="100" width="260" height="360" rx="10" fill="#1E293B" stroke="#10B981"/>
+      <text x="820" y="140" fill="#10B981" font-family="Sora" font-size="16" font-weight="700" text-anchor="middle">3. Hash SHA-256 Final</text>
+      
+      <rect x="710" y="170" width="220" height="70" rx="6" fill="#0F172A"/>
+      <text x="725" y="195" fill="#94A3B8" font-family="Inter" font-size="11">Hash do E-mail:</text>
+      <text x="725" y="222" fill="#10B981" font-family="JetBrains Mono" font-size="9">7d3b2f91a0c84e1b5...</text>
+
+      <rect x="710" y="260" width="220" height="70" rx="6" fill="#0F172A"/>
+      <text x="725" y="285" fill="#94A3B8" font-family="Inter" font-size="11">Hash do Telefone:</text>
+      <text x="725" y="312" fill="#10B981" font-family="JetBrains Mono" font-size="9">e4a81c0993b17d52f...</text>
+
+      <text x="820" y="420" fill="#10B981" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">&#10003; 100% Compatível com CAPI</text>
+    </svg>

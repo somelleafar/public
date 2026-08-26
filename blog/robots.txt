@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blog.irmaosdopixel.com.br/sitemap.xml

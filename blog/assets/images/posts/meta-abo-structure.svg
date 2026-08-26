@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Estrutura de Teste em ABO (Ad Set Budget) | Orçamentos Travados</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#2563EB" opacity="0.2"/>
+    <text x="905" y="29" fill="#2563EB" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">TESTE E VALIDAÇÃO</text>
+  
+      
+      <!-- Campaign Box -->
+      <rect x="350" y="80" width="300" height="70" rx="8" fill="#1E293B" stroke="#2563EB" stroke-width="2"/>
+      <text x="500" y="112" fill="#F8FAFC" font-family="Sora" font-size="16" font-weight="700" text-anchor="middle">Campanha de Teste (ABO)</text>
+      <text x="500" y="134" fill="#94A3B8" font-family="Inter" font-size="12" text-anchor="middle">Orçamento controlado nos conjuntos</text>
+      
+      <!-- Connectors -->
+      <path d="M 500 150 L 200 230" stroke="#38BDF8" stroke-width="2" fill="none"/>
+      <path d="M 500 150 L 500 230" stroke="#38BDF8" stroke-width="2" fill="none"/>
+      <path d="M 500 150 L 800 230" stroke="#38BDF8" stroke-width="2" fill="none"/>
+
+      <!-- Ad Set 1 -->
+      <rect x="70" y="230" width="260" height="150" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+      <text x="200" y="260" fill="#38BDF8" font-family="Sora" font-size="14" font-weight="700" text-anchor="middle">Conjunto 1 (Lookalike 1%)</text>
+      <rect x="90" y="280" width="220" height="30" rx="4" fill="#1E293B"/>
+      <text x="200" y="300" fill="#F97316" font-family="Sora" font-size="13" font-weight="800" text-anchor="middle">Verba Fixa: R$ 30,00/dia</text>
+      <text x="200" y="340" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Testa Criativo A e B</text>
+      <text x="200" y="360" fill="#10B981" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle">CPA: R$ 24,10 (Vencedor)</text>
+
+      <!-- Ad Set 2 -->
+      <rect x="370" y="230" width="260" height="150" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+      <text x="500" y="260" fill="#38BDF8" font-family="Sora" font-size="14" font-weight="700" text-anchor="middle">Conjunto 2 (Interesses)</text>
+      <rect x="390" y="280" width="220" height="30" rx="4" fill="#1E293B"/>
+      <text x="500" y="300" fill="#F97316" font-family="Sora" font-size="13" font-weight="800" text-anchor="middle">Verba Fixa: R$ 30,00/dia</text>
+      <text x="500" y="340" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Testa Criativo A e B</text>
+      <text x="500" y="360" fill="#F59E0B" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle">CPA: R$ 38,50 (Médio)</text>
+
+      <!-- Ad Set 3 -->
+      <rect x="670" y="230" width="260" height="150" rx="8" fill="#0F172A" stroke="#38BDF8"/>
+      <text x="800" y="260" fill="#38BDF8" font-family="Sora" font-size="14" font-weight="700" text-anchor="middle">Conjunto 3 (Público Aberto)</text>
+      <rect x="690" y="280" width="220" height="30" rx="4" fill="#1E293B"/>
+      <text x="800" y="300" fill="#F97316" font-family="Sora" font-size="13" font-weight="800" text-anchor="middle">Verba Fixa: R$ 30,00/dia</text>
+      <text x="800" y="340" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Testa Criativo A e B</text>
+      <text x="800" y="360" fill="#EF4444" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle">CPA: R$ 62,00 (Pausar)</text>
+
+      <rect x="70" y="420" width="860" height="80" rx="8" fill="#1E293B"/>
+      <text x="100" y="455" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">&#10003; Cada conjunto gasta exatamente R$ 30,00 por dia, permitindo isolar qual público converte melhor sem viés da IA.</text>
+      <text x="100" y="480" fill="#94A3B8" font-family="Inter" font-size="12">O Conjunto 1 é aprovado e promovido para a campanha de escala em CBO.</text>
+    </svg>

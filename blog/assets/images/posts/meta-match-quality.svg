@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Diagnóstico de Event Match Quality (Meta Ads)</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#10B981" opacity="0.2"/>
+    <text x="905" y="29" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">STATUS: EXCELENTE</text>
+  
+      
+      <!-- Score Circle Area -->
+      <rect x="50" y="80" width="300" height="440" rx="10" fill="#1E293B"/>
+      <circle cx="200" cy="220" r="90" fill="none" stroke="#334155" stroke-width="16"/>
+      <circle cx="200" cy="220" r="90" fill="none" stroke="#10B981" stroke-width="16" stroke-dasharray="565" stroke-dashoffset="65" stroke-linecap="round"/>
+      <text x="200" y="215" fill="#F8FAFC" font-family="Sora" font-size="42" font-weight="800" text-anchor="middle">8.9</text>
+      <text x="200" y="245" fill="#10B981" font-family="Inter" font-size="14" font-weight="700" text-anchor="middle">Excelente (0-10)</text>
+      <text x="200" y="350" fill="#F8FAFC" font-family="Sora" font-size="16" font-weight="700" text-anchor="middle">Evento: Compra (Purchase)</text>
+      <text x="200" y="375" fill="#94A3B8" font-family="Inter" font-size="12" text-anchor="middle">Últimos 7 dias de tráfego</text>
+      <rect x="100" y="410" width="200" height="32" rx="16" fill="#10B981" opacity="0.2"/>
+      <text x="200" y="431" fill="#10B981" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">&#10003; Correspondência Alta</text>
+
+      <!-- Parameters Breakdown -->
+      <rect x="380" y="80" width="570" height="440" rx="10" fill="#1E293B"/>
+      <text x="410" y="120" fill="#F8FAFC" font-family="Sora" font-size="18" font-weight="700">Parâmetros de Usuário Enviados</text>
+      
+      <!-- Param Rows -->
+      <rect x="410" y="145" width="510" height="45" rx="6" fill="#0F172A"/>
+      <text x="430" y="172" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="600">E-mail (SHA-256)</text>
+      <text x="750" y="172" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">98% correspondido</text>
+
+      <rect x="410" y="200" width="510" height="45" rx="6" fill="#0F172A"/>
+      <text x="430" y="227" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="600">Telefone com DDI e DDD (SHA-256)</text>
+      <text x="750" y="227" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">94% correspondido</text>
+
+      <rect x="410" y="255" width="510" height="45" rx="6" fill="#0F172A"/>
+      <text x="430" y="282" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="600">Cookie do Navegador (_fbp)</text>
+      <text x="750" y="282" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">99% presente</text>
+
+      <rect x="410" y="310" width="510" height="45" rx="6" fill="#0F172A"/>
+      <text x="430" y="337" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="600">Cookie de Clique (_fbc)</text>
+      <text x="750" y="337" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">89% em tráfego pago</text>
+
+      <rect x="410" y="365" width="510" height="45" rx="6" fill="#0F172A"/>
+      <text x="430" y="392" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="600">Endereço IP e User-Agent</text>
+      <text x="750" y="392" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">100% capturado</text>
+
+      <rect x="410" y="420" width="510" height="45" rx="6" fill="#0F172A"/>
+      <text x="430" y="447" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="600">Cidade, Estado e CEP (SHA-256)</text>
+      <text x="750" y="447" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">82% correspondido</text>
+    </svg>

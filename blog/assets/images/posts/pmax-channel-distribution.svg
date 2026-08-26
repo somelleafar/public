@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Performance Max | Relatório de Distribuição de Tráfego entre Canais Google</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#2563EB" opacity="0.2"/>
+    <text x="905" y="29" fill="#2563EB" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">AUDITORIA PMAX</text>
+  
+      
+      <!-- Left Donut Chart Simulation -->
+      <rect x="60" y="80" width="400" height="440" rx="10" fill="#1E293B"/>
+      <circle cx="260" cy="280" r="110" fill="none" stroke="#2563EB" stroke-width="35"/>
+      <circle cx="260" cy="280" r="110" fill="none" stroke="#F97316" stroke-width="35" stroke-dasharray="691" stroke-dashoffset="290"/>
+      <circle cx="260" cy="280" r="110" fill="none" stroke="#EF4444" stroke-width="35" stroke-dasharray="691" stroke-dashoffset="520"/>
+      <circle cx="260" cy="280" r="110" fill="none" stroke="#10B981" stroke-width="35" stroke-dasharray="691" stroke-dashoffset="610"/>
+      <text x="260" y="275" fill="#F8FAFC" font-family="Sora" font-size="28" font-weight="800" text-anchor="middle">PMax</text>
+      <text x="260" y="300" fill="#94A3B8" font-family="Inter" font-size="12" text-anchor="middle">Mix de Canais</text>
+
+      <!-- Right Legend & Metrics -->
+      <rect x="490" y="80" width="450" height="440" rx="10" fill="#1E293B"/>
+      <text x="520" y="125" fill="#F8FAFC" font-family="Sora" font-size="18" font-weight="700">Divisão de Faturamento por Canal:</text>
+      
+      <rect x="520" y="150" width="390" height="60" rx="6" fill="#0F172A"/>
+      <circle cx="545" cy="180" r="8" fill="#2563EB"/>
+      <text x="565" y="185" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="700">Google Shopping &amp; Pesquisa: 58%</text>
+      <text x="840" y="185" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">ROAS 5.8x</text>
+
+      <rect x="520" y="225" width="390" height="60" rx="6" fill="#0F172A"/>
+      <circle cx="545" cy="255" r="8" fill="#F97316"/>
+      <text x="565" y="260" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="700">YouTube Video In-Stream: 22%</text>
+      <text x="840" y="260" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">ROAS 4.1x</text>
+
+      <rect x="520" y="300" width="390" height="60" rx="6" fill="#0F172A"/>
+      <circle cx="545" cy="330" r="8" fill="#EF4444"/>
+      <text x="565" y="335" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="700">Feed Discover &amp; Gmail: 12%</text>
+      <text x="840" y="335" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">ROAS 3.6x</text>
+
+      <rect x="520" y="375" width="390" height="60" rx="6" fill="#0F172A"/>
+      <circle cx="545" cy="405" r="8" fill="#10B981"/>
+      <text x="565" y="410" fill="#F8FAFC" font-family="Inter" font-size="13" font-weight="700">Google Maps (Local): 8%</text>
+      <text x="840" y="410" fill="#10B981" font-family="Inter" font-size="13" font-weight="700">ROAS 6.2x</text>
+
+      <text x="715" y="485" fill="#38BDF8" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">&#10003; Canais de jogos e apps infantis excluídos para poupar verba.</text>
+    </svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Meta Business Suite | Gerenciador de Eventos > Configurações</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#10B981" opacity="0.2"/>
+    <text x="905" y="29" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">PIXEL ATIVO</text>
+  
+      
+      <!-- Sidebar Mockup -->
+      <rect x="24" y="68" width="220" height="468" rx="8" fill="#1E293B"/>
+      <rect x="40" y="90" width="188" height="28" rx="6" fill="#2563EB" opacity="0.2"/>
+      <text x="52" y="109" fill="#38BDF8" font-family="Inter" font-size="13" font-weight="600">Fontes de Dados</text>
+      <text x="52" y="145" fill="#94A3B8" font-family="Inter" font-size="13">Visão Geral</text>
+      <text x="52" y="180" fill="#94A3B8" font-family="Inter" font-size="13">Testar Eventos</text>
+      <text x="52" y="215" fill="#94A3B8" font-family="Inter" font-size="13">Diagnósticos</text>
+      <text x="52" y="250" fill="#94A3B8" font-family="Inter" font-size="13">Histórico</text>
+      
+      <!-- Content Area -->
+      <rect x="264" y="68" width="712" height="468" rx="8" fill="#0F172A" stroke="#334155"/>
+      <text x="294" y="110" fill="#F8FAFC" font-family="Sora" font-size="20" font-weight="700">Pixel do Domínio Principal (ID: 884729103948)</text>
+      <text x="294" y="135" fill="#94A3B8" font-family="Inter" font-size="13">Status: Conectado e recebendo dados híbridos</text>
+      
+      <!-- Box CAPI -->
+      <rect x="294" y="165" width="652" height="190" rx="10" fill="#1E293B" stroke="#2563EB" stroke-width="2"/>
+      <text x="320" y="200" fill="#38BDF8" font-family="Sora" font-size="16" font-weight="700">API de Conversões (CAPI) - Integração Manual</text>
+      <text x="320" y="225" fill="#94A3B8" font-family="Inter" font-size="13">Gere uma chave de acesso privada para envio direto de eventos server-side.</text>
+      
+      <!-- Token Display Box -->
+      <rect x="320" y="245" width="600" height="42" rx="6" fill="#090D16" stroke="#334155"/>
+      <text x="335" y="271" fill="#10B981" font-family="JetBrains Mono" font-size="12">EAAGm0PX4ZC8...wB9ZArV7w8kqM0L2pX9Q1bC7</text>
+      <rect x="825" y="251" width="85" height="30" rx="4" fill="#2563EB"/>
+      <text x="867" y="271" fill="#FFFFFF" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle">Copiar</text>
+      
+      <rect x="320" y="302" width="220" height="36" rx="6" fill="#F97316"/>
+      <text x="430" y="325" fill="#FFFFFF" font-family="Inter" font-size="13" font-weight="700" text-anchor="middle">Gerar Novo Token</text>
+      
+      <!-- Status Card -->
+      <rect x="294" y="375" width="652" height="135" rx="8" fill="#1E293B"/>
+      <text x="320" y="410" fill="#F8FAFC" font-family="Inter" font-size="14" font-weight="600">Event Match Quality Atual:</text>
+      <text x="515" y="410" fill="#10B981" font-family="Sora" font-size="16" font-weight="800">8.9 / 10 (Excelente)</text>
+      <rect x="320" y="430" width="600" height="8" rx="4" fill="#334155"/>
+      <rect x="320" y="430" width="534" height="8" rx="4" fill="#10B981"/>
+      <text x="320" y="465" fill="#94A3B8" font-family="Inter" font-size="12">Parâmetros Ativos: E-mail (SHA-256), Telefone (SHA-256), Cookie _fbp, Cookie _fbc, IP, User-Agent.</text>
+    </svg>
