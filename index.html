@@ -1,309 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#f7f2eb" />
-<meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<title>Triagem de Novos Clientes  -  Irmãos do Pixel</title>
-<style>
-  :root{
-    --navy:#4b2417;
-    --navy-soft:#704333;
-    --red:#704333;
-    --red-dark:#4b2417;
-    --sage:#73836b;
-    --border:#e4d9c9;
-    --bg:#f7f2eb;
-    --muted:rgba(75,36,23,.65);
-    --radius:14px;
-  }
-  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
-  html,body{height:100%;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--navy);
-    font-family:Arial,Helvetica,sans-serif;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:100vh;
-    min-height:100svh;
-    padding:24px;
-    padding-top:max(24px, env(safe-area-inset-top));
-    padding-bottom:max(24px, env(safe-area-inset-bottom));
-    padding-left:max(24px, env(safe-area-inset-left));
-    padding-right:max(24px, env(safe-area-inset-right));
-    overflow-x:hidden;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irmãos do Pixel  -  Engenharia de Performance & Tráfego Pago</title>
+  <meta name="description" content="Nós unimos anúncios, dados, criativos e análise comercial para estruturar o crescimento previsível de empresas exigentes. Sem achismo." />
 
-  .progress{
-    position:fixed;
-    top:0; left:0;
-    height:4px;
-    background:var(--red);
-    width:0%;
-    transition:width .35s ease;
-    z-index:20;
-  }
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  .card{
-    width:100%;
-    max-width:640px;
-  }
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-  .step{
-    display:none;
-    animation:fadeIn .35s ease;
-  }
-  .step.active{ display:block; }
-
-  @keyframes fadeIn{
-    from{ opacity:0; transform:translateY(8px); }
-    to{ opacity:1; transform:translateY(0); }
-  }
-
-  .step-label{
-    color:var(--red);
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    margin-bottom:10px;
-  }
-
-  h1{
-    font-size:clamp(24px, 4vw, 32px);
-    line-height:1.25;
-    font-weight:800;
-    color:var(--navy);
-    margin:0 0 28px;
-  }
-  h1 .req{ color:var(--red); }
-
-  .options{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    margin-bottom:28px;
-  }
-
-  .option{
-    display:flex;
-    align-items:center;
-    gap:16px;
-    border:1.5px solid var(--border);
-    border-radius:12px;
-    padding:16px 18px;
-    min-height:56px;
-    width:100%;
-    cursor:pointer;
-    background:#fffaf5;
-    transition:border-color .15s ease, background .15s ease, transform .1s ease;
-    text-align:left;
-    font-size:16px;
-    color:var(--navy);
-    touch-action:manipulation;
-  }
-  @media (hover:hover){
-    .option:hover{
-      border-color:var(--red);
-      background:#eee3d6;
+  <!-- Style Link -->
+  <link rel="stylesheet" href="index.css" />
+  
+  <style>
+    /* Inline additions for specialized visual animations & visual widgets */
+    .dashboard-widget {
+      position: relative;
     }
-  }
-  .option.selected{
-    border-color:var(--red);
-    background:#eee3d6;
-  }
-  .option:active{ transform:scale(.985); background:#eee3d6; }
+    
+    .dash-line-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
 
-  .badge{
-    flex:0 0 auto;
-    width:30px; height:30px;
-    border-radius:8px;
-    border:1.5px solid var(--border);
-    display:flex; align-items:center; justify-content:center;
-    font-size:13px; font-weight:700; color:var(--muted);
-    transition:border-color .15s ease, color .15s ease, background .15s ease;
-  }
-  .option.selected .badge{
-    border-color:var(--red);
-    background:var(--red);
-    color:#fffaf5;
-  }
+    /* Animated dash line path drawing */
+    .graph-path-main {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawLine 4s cubic-bezier(0.22, 1, 0.36, 1) forwards infinite;
+    }
+    
+    .graph-path-second {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: drawLine 4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards infinite;
+      opacity: 0.6;
+    }
 
-  .field{
-    margin-bottom:28px;
-  }
-  input[type="text"], input[type="tel"]{
-    width:100%;
-    font-size:20px;
-    padding:14px 4px;
-    min-height:48px;
-    border:none;
-    border-radius:0;
-    -webkit-appearance:none;
-    appearance:none;
-    border-bottom:2px solid var(--border);
-    outline:none;
-    color:var(--navy);
-    background:transparent;
-    transition:border-color .15s ease;
-  }
-  input[type="text"]:focus, input[type="tel"]:focus{
-    border-bottom-color:var(--red);
-  }
-  input::placeholder{ color:#b7a996; }
+    @keyframes drawLine {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
 
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    background:var(--red);
-    color:#fffaf5;
-    border:none;
-    border-radius:10px;
-    padding:14px 26px;
-    min-height:52px;
-    font-size:16px;
-    font-weight:700;
-    cursor:pointer;
-    transition:background .15s ease, transform .1s ease;
-    touch-action:manipulation;
-    width:100%;
-  }
-  @media (hover:hover){
-    .btn:hover{ background:var(--red-dark); }
-  }
-  .btn:active{ transform:scale(.98); background:var(--red-dark); }
-  .btn:disabled{
-    background:#d8cdba;
-    cursor:not-allowed;
-  }
+    .pulse-pixel {
+      animation: pixelGlow 2s alternate infinite;
+    }
 
-  @media (min-width:520px){
-    .btn{ width:auto; }
-  }
+    @keyframes pixelGlow {
+      0% {
+        opacity: 0.3;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1.2);
+        fill: var(--blue-pixel);
+      }
+    }
 
-  .hint{
-    margin-top:14px;
-    font-size:13px;
-    color:var(--muted);
-  }
-  .hint kbd{
-    display:inline-block;
-    border:1px solid var(--border);
-    border-radius:5px;
-    padding:2px 8px;
-    font-family:inherit;
-    font-size:12px;
-    background:#eee3d6;
-  }
+    /* Graph node pulses */
+    .graph-node {
+      animation: nodePulse 2s infinite;
+      transform-origin: center;
+    }
+    
+    .graph-node-2 {
+      animation: nodePulse 2s infinite 1s;
+      transform-origin: center;
+    }
 
-  .back{
-    position:fixed;
-    top:max(24px, env(safe-area-inset-top));
-    left:max(24px, env(safe-area-inset-left));
-    display:flex;
-    align-items:center;
-    gap:6px;
-    color:var(--muted);
-    background:none;
-    border:none;
-    font-size:14px;
-    cursor:pointer;
-    padding:10px 8px;
-    min-height:44px;
-    touch-action:manipulation;
-    z-index:30;
-  }
-  @media (hover:hover){
-    .back:hover{ color:var(--navy); }
-  }
-  .back[hidden]{ display:none; }
+    @keyframes nodePulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.6);
+        opacity: 0.5;
+        fill: var(--red-pixel);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 
-  .error{
-    color:var(--red);
-    font-size:13px;
-    margin-top:8px;
-    display:none;
-  }
-  .error.show{ display:block; }
-
-  /* Intro screen */
-  .intro h1{
-    margin-bottom:20px;
-  }
-  .intro p{
-    color:var(--muted);
-    font-size:17px;
-    line-height:1.6;
-    max-width:560px;
-    margin:0 0 16px;
-  }
-  .intro p:last-of-type{
-    margin-bottom:28px;
-  }
-  .intro .btn{
-    margin-top:4px;
-  }
-
-  /* Final screen */
-  .final{
-    text-align:center;
-  }
-  .final .icon{
-    width:64px; height:64px;
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    margin:0 auto 20px;
-    font-size:32px;
-    background:#e4e9e0;
-    color:var(--sage);
-  }
-  .final h1{ margin-bottom:12px; }
-  .final p{
-    color:var(--muted);
-    font-size:17px;
-    line-height:1.6;
-    max-width:460px;
-    margin:0 auto;
-  }
-  .final .brand{
-    margin-top:36px;
-    font-size:13px;
-    color:#b7a996;
-    font-weight:700;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-  }
-
-  @media (max-width:600px){
-    body{ padding:20px; padding-top:max(20px, env(safe-area-inset-top)); padding-bottom:max(20px, env(safe-area-inset-bottom)); }
-    .back{ top:max(16px, env(safe-area-inset-top)); left:max(16px, env(safe-area-inset-left)); }
-    h1{ font-size:clamp(21px, 6vw, 28px); margin-bottom:20px; }
-    .intro p, .final p{ font-size:16px; }
-    .option{ padding:14px 16px; font-size:15px; }
-    input[type="text"], input[type="tel"]{ font-size:18px; }
-  }
-
-  @media (max-width:360px){
-    body{ padding:16px; }
-    h1{ font-size:clamp(19px, 6.5vw, 24px); }
-    .badge{ width:26px; height:26px; font-size:12px; }
-    .btn{ padding:14px 18px; }
-  }
-
-  @media (max-height:600px) and (max-width:600px){
-    .intro p:not(:last-of-type){ display:none; }
-    .hint{ margin-top:10px; }
-  }
-</style>
+    /* Pixel noise background overlay */
+    .pixel-decorations {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      opacity: 0.2;
+    }
+    .pixel-decorations-right {
+      position: absolute;
+      bottom: 15%;
+      right: 5%;
+      display: flex;
+      gap: 4px;
+      opacity: 0.25;
+    }
+    .px-box {
+      width: 6px;
+      height: 6px;
+      background: var(--blue-pixel);
+    }
+    .px-box.red {
+      background: var(--red-pixel);
+    }
+  </style>
   <!-- Google Analytics 4 (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VTY7BGCY1"></script>
   <script>
@@ -320,200 +135,444 @@
 </head>
 <body>
 
-<div class="progress" id="progress"></div>
-<button class="back" id="backBtn" hidden aria-label="Voltar">&larr; Voltar</button>
+  <!-- ============================================
+       HEADER / NAVIGATION
+       ============================================ -->
+  <header class="header" id="mainHeader">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5">
+            <rect x="3" y="3" width="18" height="18" rx="1"/>
+            <path d="M9 17h6M9 12h6M9 7h3"/>
+          </svg>
+        </div>
+        Irmãos do <span>Pixel</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#dores" class="nav-link">Problemas</a>
+        <a href="#metodo" class="nav-link">Nosso Método</a>
+        <a href="#resultados" class="nav-link">Resultado</a>
+        <a href="/blog" class="nav-link" style="color: var(--blue-pixel, #0284c7); font-weight: 700;">Blog</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
 
-<div class="card">
+      <div class="header-cta">
+        <a href="https://wa.me/5511999999999?text=Olá!%20Acessei%20o%20site%20da%20Irmãos%20do%20Pixel%20e%20gostaria%20de%20analisar%20meu%20tráfego." target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">
+          Falar com Especialista
+        </a>
+      </div>
 
-  <!-- Step 0: Intro -->
-  <section class="step intro active" data-step="0">
-    <h1>Quantas vendas você perde por não aparecer?</h1>
-    <p>Se a sua empresa não é vista com frequência, ela também não é lembrada na hora da compra.</p>
-    <p>Preencha o formulário e descubra como vender mais com anúncios online.</p>
-    <button class="btn" id="btnStart">Começar agora →</button>
-    <div class="hint">leva menos de 1 minuto</div>
-  </section>
-
-  <!-- Step 1: Nome completo -->
-  <section class="step" data-step="1">
-    <div class="step-label">Etapa 1 de 4</div>
-    <h1>Qual o seu nome completo? <span class="req">*</span></h1>
-    <div class="field">
-      <input type="text" id="nome" placeholder="Digite seu nome completo" autocomplete="name" enterkeyhint="next" />
-      <div class="error" id="erroNome">Por favor, preencha seu nome completo.</div>
+      <button class="mobile-toggle" aria-label="Abrir Menu">
+        <i data-lucide="menu" id="menuIcon"></i>
+      </button>
     </div>
-    <button class="btn" id="btnNome">Continuar</button>
-    <div class="hint">pressione <kbd>Enter ↵</kbd></div>
-  </section>
+  </header>
 
-  <!-- Step 2: Telefone -->
-  <section class="step" data-step="2">
-    <div class="step-label">Etapa 2 de 4</div>
-    <h1>Qual o seu telefone/WhatsApp? <span class="req">*</span></h1>
-    <div class="field">
-      <input type="tel" id="telefone" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="tel" enterkeyhint="next" />
-      <div class="error" id="erroTelefone">Informe um telefone válido.</div>
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#dores" class="mobile-nav-link">Problemas</a>
+    <a href="#metodo" class="mobile-nav-link">Nosso Método</a>
+    <a href="#resultados" class="mobile-nav-link">Resultado</a>
+    <a href="#contato" class="mobile-nav-link">Contato</a>
+    <a href="https://wa.me/5511999999999?text=Olá!%20Acessei%20o%20site%20da%20Irmãos%20do%20Pixel%20e%20gostaria%20de%20analisar%20meu%20tráfego." target="_blank" class="btn btn-primary" style="margin-top: 16px;">
+      Analisar meu tráfego
+    </a>
+  </div>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero-section">
+    <div class="pixel-grid"></div>
+    <div class="radial-glow" style="top: -10%; left: 20%;"></div>
+    <div class="radial-glow-red" style="bottom: 10%; right: 10%;"></div>
+    
+    <div class="pixel-decorations">
+      <div style="display:flex; gap:4px;"><div class="px-box"></div><div class="px-box"></div></div>
+      <div style="display:flex; gap:4px;"><div class="px-box transparent"></div><div class="px-box red"></div></div>
+      <div style="display:flex; gap:4px;"><div class="px-box"></div><div class="px-box transparent"></div></div>
     </div>
-    <button class="btn" id="btnTelefone">Continuar</button>
-    <div class="hint">pressione <kbd>Enter ↵</kbd></div>
-  </section>
 
-  <!-- Step 3: Instagram -->
-  <section class="step" data-step="3">
-    <div class="step-label">Etapa 3 de 4</div>
-    <h1>Qual o @ do seu Instagram? <span class="req">*</span></h1>
-    <div class="field">
-      <input type="text" id="instagram" placeholder="@seuinstagram" autocapitalize="none" autocorrect="off" enterkeyhint="next" />
-      <div class="error" id="erroInstagram">Informe seu @ do Instagram.</div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>Orientados a Dados & Vendas</span>
+        </div>
+        <h1 class="title-large hero-title reveal-up">
+          Tráfego Pago para <br>Empresas que Querem <br><span class="highlight-red">Escalar com Estratégia</span>
+        </h1>
+        <p class="text-desc hero-desc reveal-up" style="transition-delay: 0.1s;">
+          A Irmãos do Pixel une anúncios de alta conversão, análise rigorosa de dados, criativos focados no seu público e inteligência comercial para transformar investimento em crescimento previsível.
+        </p>
+        <div class="hero-ctas reveal-up" style="transition-delay: 0.2s;">
+          <a href="https://wa.me/5511999999999?text=Olá!%20Acessei%20o%20site%20da%20Irmãos%20do%20Pixel%20e%20gostaria%20de%20solicitar%20uma%20análise%20estratégica%20do%20meu%20tráfego." target="_blank" rel="noopener" class="btn btn-primary">
+            Quero analisar meu tráfego
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-up" style="transition-delay: 0.3s;">
+        <div class="dashboard-widget">
+          <div class="dashboard-header">
+            <div class="dash-title">
+              <i data-lucide="bar-chart-2" style="width: 14px; height: 14px; color: var(--blue-pixel);"></i>
+              Pixel Tracker Engine
+            </div>
+            <div class="dash-status">
+              Live Monitor
+            </div>
+          </div>
+          
+          <div class="dashboard-stats">
+            <div class="stat-item">
+              <div class="stat-val blue">R$ 4,4k</div>
+              <div class="stat-lbl">Mídia Investida</div>
+            </div>
+            <div class="stat-item" style="border-left: 1px solid var(--border-fine);">
+              <div class="stat-val">626k</div>
+              <div class="stat-lbl">Impressões</div>
+            </div>
+            <div class="stat-item" style="border-top: 1px solid var(--border-fine);">
+              <div class="stat-val red">3.1x</div>
+              <div class="stat-lbl">ROI Estimado</div>
+            </div>
+            <div class="stat-item" style="border-left: 1px solid var(--border-fine); border-top: 1px solid var(--border-fine);">
+              <div class="stat-val">R$ 0,21</div>
+              <div class="stat-lbl">CPC Médio</div>
+            </div>
+          </div>
+
+          <div class="dashboard-graph">
+            <svg class="dash-line-svg" viewBox="0 0 400 180" fill="none">
+              <!-- Grid Lines -->
+              <line x1="10" y1="30" x2="390" y2="30" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="10" y1="75" x2="390" y2="75" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="10" y1="120" x2="390" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+              <line x1="10" y1="160" x2="390" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+              
+              <!-- Growth paths (Simulated conversion curves) -->
+              <path class="graph-path-second" d="M10,150 Q100,140 180,95 T390,40" stroke="var(--blue-pixel)" stroke-width="2" stroke-linecap="round"/>
+              <path class="graph-path-main" d="M10,160 C80,155 120,110 200,90 T390,15" stroke="var(--red-pixel)" stroke-width="3" stroke-linecap="round"/>
+              
+              <!-- Points & pulses -->
+              <circle class="graph-node" cx="200" cy="90" r="5" fill="var(--red-pixel)" />
+              <circle class="graph-node-2" cx="390" cy="15" r="5" fill="var(--red-pixel)" />
+              <circle class="pulse-pixel" cx="120" cy="120" r="4" fill="var(--blue-pixel)" />
+              <circle class="pulse-pixel" cx="300" cy="50" r="4" fill="var(--blue-pixel)" />
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
-    <button class="btn" id="btnInstagram">Continuar</button>
-    <div class="hint">pressione <kbd>Enter ↵</kbd></div>
   </section>
 
-  <!-- Step 4: Faturamento -->
-  <section class="step" data-step="4">
-    <div class="step-label">Etapa 4 de 4</div>
-    <h1>Faturamento médio mensal da empresa: <span class="req">*</span></h1>
-    <div class="options" role="radiogroup" aria-label="Faturamento médio mensal">
-      <button type="button" class="option" data-value="Até R$ 20.000/mês"><span class="badge">A</span>Até R$ 20.000/mês</button>
-      <button type="button" class="option" data-value="R$ 20.000 – R$ 100.000/mês"><span class="badge">B</span>R$ 20.000 – R$ 100.000/mês</button>
-      <button type="button" class="option" data-value="R$ 100.000 – R$ 300.000/mês"><span class="badge">C</span>R$ 100.000 – R$ 300.000/mês</button>
-      <button type="button" class="option" data-value="Acima de R$300.000/mês"><span class="badge">D</span>Acima de R$300.000/mês</button>
+  <!-- ============================================
+       PAIN SECTION (Seção de Dor)
+       ============================================ -->
+  <section class="section pain-section" id="dores">
+    <div class="pixel-grid"></div>
+    <div class="radial-glow-red" style="top: 10%; left: -10%;"></div>
+    
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="title-section reveal-up">
+          Se o tráfego não vende, <br>o problema <span class="highlight-red">não está só no anúncio</span>
+        </h2>
+        <p class="text-desc section-sub reveal-up" style="max-width: 680px; margin-top: 16px;">
+          Subir campanhas no gerenciador de anúncios é a parte simples. O que determina seu crescimento são as engrenagens ocultas que a maioria das agências decide ignorar.
+        </p>
+      </div>
+
+      <div class="pain-grid" style="margin-top: 56px;">
+        
+        <!-- Card 1 -->
+        <div class="pain-card reveal-up">
+          <div class="pain-icon-wrapper">
+            <i data-lucide="compass" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h3 class="title-card">Campanhas sem Direção</h3>
+          <p class="pain-text">Anúncios sem clareza estratégica e de público. O resultado é a queima de caixa ao atrair pessoas desalinhadas com o seu ticket de venda.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pain-card reveal-up" style="transition-delay: 0.05s;">
+          <div class="pain-icon-wrapper">
+            <i data-lucide="users" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h3 class="title-card">Leads Ruins</h3>
+          <p class="pain-text">O tráfego gera cliques e conversões baratas, mas o setor comercial reclama que os contatos não respondem e não têm dinheiro para comprar.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pain-card reveal-up" style="transition-delay: 0.1s;">
+          <div class="pain-icon-wrapper">
+            <i data-lucide="sparkles" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h3 class="title-card">Criativos Fracos</h3>
+          <p class="pain-text">Anúncios genéricos e sem impacto que não chamam atenção. A falta de testes de ângulos e criativos faz seu CPL disparar rapidamente.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="pain-card reveal-up">
+          <div class="pain-icon-wrapper">
+            <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h3 class="title-card">Atendimento Lento</h3>
+          <p class="pain-text">Lead quente que esfria esperando resposta. Sem automação ou processo comercial imediato no WhatsApp, o cliente fecha com o concorrente.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="pain-card reveal-up" style="transition-delay: 0.05s;">
+          <div class="pain-icon-wrapper">
+            <i data-lucide="layout" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h3 class="title-card">Site que Não Converte</h3>
+          <p class="pain-text">Páginas lentas, confusas ou mal formatadas. Se a sua landing page não direciona a decisão, ela funciona apenas como um vazador de verba.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="pain-card reveal-up" style="transition-delay: 0.1s;">
+          <div class="pain-icon-wrapper">
+            <i data-lucide="target" style="width: 24px; height: 24px;"></i>
+          </div>
+          <h3 class="title-card">Oferta Mal Posicionada</h3>
+          <p class="pain-text">Um posicionamento comercial fraco que faz o público comparar você exclusivamente pelo preço. Sem diferenciação, as vendas travam.</p>
+        </div>
+
+      </div>
     </div>
-    <div class="hint">selecione uma opção para continuar</div>
   </section>
 
-  <!-- Final -->
-  <section class="step final" data-step="5">
-    <div class="icon">✓</div>
-    <h1>Recebemos suas informações!</h1>
-    <p>Obrigado por preencher o formulário. Nossa equipe vai analisar seus dados e entrar em contato em breve pelo WhatsApp ou Instagram informado.</p>
-    <div class="brand">IRMÃOS DO PIXEL</div>
+  <!-- ============================================
+       METHOD SECTION (Seção de Método)
+       ============================================ -->
+  <section class="section method-section" id="metodo">
+    <div class="pixel-grid"></div>
+    <div class="radial-glow" style="bottom: -10%; right: -10%;"></div>
+    
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="title-section reveal-up">
+          Não é sobre subir campanha. <br>É sobre <span class="highlight-blue">construir crescimento.</span>
+        </h2>
+        <p class="text-desc section-sub reveal-up" style="max-width: 680px; margin-top: 16px;">
+          Nossa metodologia une estratégia comercial de ponta a ponta com otimização contínua de anúncios. Estruturamos seu funil com precisão científica.
+        </p>
+      </div>
+
+      <div class="method-grid">
+        
+        <!-- Step 1 -->
+        <div class="method-card reveal-up">
+          <span class="method-step">Fase 01 · Diagnóstico</span>
+          <h3 class="title-card">Métricas sob Raio-X</h3>
+          <p class="method-desc">Analisamos a fundo suas contas de anúncio, landing page e histórico comercial para mapear exatamente onde o funil está quebrando e gerando desperdício.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="method-card reveal-up" style="transition-delay: 0.05s;">
+          <span class="method-step">Fase 02 · Estratégia</span>
+          <h3 class="title-card">Planejamento de Guerra</h3>
+          <p class="method-desc">Desenvolvemos o plano de canais, segmentações de público, distribuição de verba e fluxo de atendimento comercial adequados ao momento do seu negócio.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="method-card reveal-up" style="transition-delay: 0.1s;">
+          <span class="method-step">Fase 03 · Criativos</span>
+          <h3 class="title-card">Validação de Mensagem</h3>
+          <p class="method-desc">Planejamos e estruturamos roteiros de anúncios dinâmicos. Criamos imagens e vídeos persuasivos focados nas maiores dores e desejos da persona.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="method-card reveal-up">
+          <span class="method-step">Fase 04 · Campanhas</span>
+          <h3 class="title-card">Implementação Técnica</h3>
+          <p class="method-desc">Construímos a arquitetura de anúncios com tags, pixels de conversão e APIs configuradas perfeitamente, garantindo que o algoritmo entenda quem compra.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="method-card reveal-up" style="transition-delay: 0.05s;">
+          <span class="method-step">Fase 05 · Otimização</span>
+          <h3 class="title-card">Calibração de Dados</h3>
+          <p class="method-desc">Realizamos leitura de dados diária para otimizar os criativos e direcionar a verba para as campanhas de melhor retorno de venda real, não curtida.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="method-card reveal-up" style="transition-delay: 0.1s;">
+          <span class="method-step">Fase 06 · Escala</span>
+          <h3 class="title-card">Aceleração com Margem</h3>
+          <p class="method-desc">Aumentamos gradualmente o investimento de mídia nas campanhas validadas para expandir o faturamento, monitorando a rentabilidade da sua operação comercial.</p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-</div>
+  <!-- ============================================
+       AUTHORITY SECTION (Seção de Autoridade)
+       ============================================ -->
+  <section class="section authority-section" id="resultados">
+    <div class="pixel-grid"></div>
+    <div class="radial-glow-red" style="top: 20%; right: -5%;"></div>
+    
+    <div class="container">
+      <div class="section-header section-header--center">
+        <h2 class="title-section reveal-up">
+          Métricas que Falam a <br>língua da <span class="highlight-red">sua empresa</span>
+        </h2>
+      </div>
 
-<script>
-(function(){
-  const steps = Array.from(document.querySelectorAll('.step'));
-  const progress = document.getElementById('progress');
-  const backBtn = document.getElementById('backBtn');
-  let current = 0;
+      <div class="spec-grid" style="margin-top: 56px;">
+        
+        <!-- Spec Card 1 -->
+        <div class="spec-card reveal-up">
+          <div class="spec-num highlight">+100</div>
+          <div class="spec-label">Contas de Tráfego Otimizadas</div>
+        </div>
 
-  const data = { nome:'', telefone:'', instagram:'', faturamento:'' };
+        <!-- Spec Card 2 -->
+        <div class="spec-card reveal-up" style="transition-delay: 0.05s;">
+          <div class="spec-num">Ads Cert.</div>
+          <div class="spec-label">Google & Meta Oficiais</div>
+        </div>
 
-  // Steps: 0 intro, 1 nome, 2 telefone, 3 instagram, 4 faturamento, 5 final
-  const QUESTIONS = 4;
+        <!-- Spec Card 3 -->
+        <div class="spec-card reveal-up" style="transition-delay: 0.1s;">
+          <div class="spec-num highlight">Full</div>
+          <div class="spec-label">Funis, LPs & Automações</div>
+        </div>
 
-  function goTo(index){
-    steps[current].classList.remove('active');
-    current = index;
-    steps[current].classList.add('active');
-    let pct;
-    if (current === 0) pct = 0;
-    else if (current >= steps.length - 1) pct = 100;
-    else pct = ((current - 1) / QUESTIONS) * 100;
-    progress.style.width = pct + '%';
-    backBtn.hidden = current === 0 || current === steps.length - 1;
+        <!-- Spec Card 4 -->
+        <div class="spec-card reveal-up" style="transition-delay: 0.15s;">
+          <div class="spec-num">Growth</div>
+          <div class="spec-label">Foco total em vendas</div>
+        </div>
 
-    const input = steps[current].querySelector('input');
-    if (input) setTimeout(() => input.focus(), 50);
-  }
+      </div>
+    </div>
+  </section>
 
-  backBtn.addEventListener('click', () => {
-    if (current > 0) goTo(current - 1);
-  });
+  <!-- ============================================
+       FINAL CTA SECTION
+       ============================================ -->
+  <section class="section final-cta-section" id="contato">
+    <div class="pixel-grid"></div>
+    <div class="radial-glow" style="top: 30%; left: 50%; transform: translateX(-50%);"></div>
+    
+    <div class="pixel-decorations-right">
+      <div class="px-box red"></div>
+      <div class="px-box"></div>
+      <div class="px-box red"></div>
+    </div>
 
-  // Step 0: intro
-  document.getElementById('btnStart').addEventListener('click', () => goTo(1));
+    <div class="container">
+      <div class="final-cta-inner">
+        <h2 class="title-large final-cta-title reveal-up">
+          Marketing é o oxigênio <br>do negócio. Mas sem <br>estratégia, o <span class="highlight-red">dinheiro evapora.</span>
+        </h2>
+        <p class="text-desc final-cta-desc reveal-up" style="transition-delay: 0.1s;">
+          Deixe de jogar verba em campanhas baseadas em achismo. Nós analisamos as falhas do seu processo atual de anúncios e desenhamos uma estratégia robusta orientada ao seu crescimento comercial real.
+        </p>
+        <div class="reveal-up" style="transition-delay: 0.2s;">
+          <a href="https://wa.me/5511999999999?text=Olá!%20Acessei%20o%20site%20da%20Irmãos%20do%20Pixel%20e%20gostaria%20de%20conversar%20sobre%20o%20meu%20plano%20de%20crescimento." target="_blank" rel="noopener" class="btn btn-primary" style="padding: 20px 48px; font-size: 1.05rem;">
+            Falar com a Irmãos do Pixel
+            <i data-lucide="message-square" style="width: 18px; height: 18px;"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  // Step 1: nome
-  const nomeInput = document.getElementById('nome');
-  const erroNome = document.getElementById('erroNome');
-  function submitNome(){
-    const val = nomeInput.value.trim();
-    if (val.split(' ').filter(Boolean).length < 2) {
-      erroNome.classList.add('show');
-      return;
-    }
-    erroNome.classList.remove('show');
-    data.nome = val;
-    goTo(2);
-  }
-  document.getElementById('btnNome').addEventListener('click', submitNome);
-  nomeInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitNome(); });
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#" class="footer-logo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue-pixel)" stroke-width="3" style="display:inline-block; vertical-align:middle; margin-right:4px;">
+            <rect x="3" y="3" width="18" height="18" rx="1"/>
+          </svg>
+          Irmãos do <span>Pixel</span>
+        </a>
+        
+        <p class="footer-copy">
+          &copy; 2026 Irmãos do Pixel. Todos os direitos reservados.
+        </p>
+        
+        <div class="footer-links">
+          <a href="#dores" class="footer-link">Problemas</a>
+          <a href="#metodo" class="footer-link">Método</a>
+          <a href="#resultados" class="footer-link">Resultados</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  // Step 2: telefone
-  const telInput = document.getElementById('telefone');
-  const erroTelefone = document.getElementById('erroTelefone');
-  telInput.addEventListener('input', () => {
-    let v = telInput.value.replace(/\D/g,'').slice(0,11);
-    if (v.length > 6) v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-    else if (v.length > 2) v = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
-    else if (v.length > 0) v = v.replace(/(\d{0,2})/, '($1');
-    telInput.value = v;
-  });
-  function submitTelefone(){
-    const digits = telInput.value.replace(/\D/g,'');
-    if (digits.length < 10) {
-      erroTelefone.classList.add('show');
-      return;
-    }
-    erroTelefone.classList.remove('show');
-    data.telefone = telInput.value.trim();
-    goTo(3);
-  }
-  document.getElementById('btnTelefone').addEventListener('click', submitTelefone);
-  telInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitTelefone(); });
+  <!-- ============================================
+       JAVASCRIPT SCRIPTS
+       ============================================ -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
 
-  // Step 3: instagram
-  const igInput = document.getElementById('instagram');
-  const erroInstagram = document.getElementById('erroInstagram');
-  igInput.addEventListener('focus', () => { if (!igInput.value) igInput.value = '@'; });
-  function submitInstagram(){
-    let val = igInput.value.trim();
-    if (!val.startsWith('@')) val = '@' + val;
-    if (val.length < 2) {
-      erroInstagram.classList.add('show');
-      return;
-    }
-    erroInstagram.classList.remove('show');
-    data.instagram = val;
-    goTo(4);
-  }
-  document.getElementById('btnInstagram').addEventListener('click', submitInstagram);
-  igInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitInstagram(); });
-
-  // Step 4: faturamento (click select)
-  document.querySelectorAll('.option').forEach(opt => {
-    opt.addEventListener('click', () => {
-      document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
-      opt.classList.add('selected');
-      data.faturamento = opt.dataset.value;
-      setTimeout(finishForm, 250);
+    // Scroll Header Background Shift
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
     });
-  });
 
-  // Cole aqui a URL do seu Web App do Apps Script (Deploy > New deployment > Web app)
-  const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzrM555CB5fpwVzYDAKCmaqLx1sy0sssCeiKF3EluVhv2ncvLKbvr2CO9ZrA9IpOMoRaA/exec';
+    // Mobile Navigation Toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const menuIcon = document.getElementById('menuIcon');
+    
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      if (isOpen) {
+        menuIcon.setAttribute('data-lucide', 'x');
+      } else {
+        menuIcon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    });
 
-  function finishForm(){
-    if (SHEET_ENDPOINT && SHEET_ENDPOINT !== 'COLE_AQUI_A_URL_DO_APP_SCRIPT') {
-      fetch(SHEET_ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(data)
-      }).catch(err => console.error('Erro ao enviar para a planilha:', err));
-    } else {
-      console.log('Lead capturado (defina SHEET_ENDPOINT para salvar na planilha):', data);
-    }
-    goTo(5);
-  }
+    // Close Mobile Menu on Click Link
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        lucide.createIcons();
+      });
+    });
 
-  goTo(0);
-})();
-</script>
+    // Scroll Reveal Animation (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal-up');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Once animated, remove observer for performance
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
 
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+  </script>
 </body>
 </html>
