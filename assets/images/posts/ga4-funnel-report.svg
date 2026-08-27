@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Google Analytics 4 | Relatório de Exploração do Funil de Compras</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#2563EB" opacity="0.2"/>
+    <text x="905" y="29" fill="#2563EB" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">FUNIL DE E-COMMERCE</text>
+  
+      
+      <!-- Bars Chart -->
+      <rect x="80" y="100" width="180" height="380" rx="8" fill="#1E293B"/>
+      <rect x="95" y="130" width="150" height="330" rx="6" fill="#2563EB"/>
+      <text x="170" y="170" fill="#FFFFFF" font-family="Sora" font-size="18" font-weight="800" text-anchor="middle">100%</text>
+      <text x="170" y="195" fill="#FFFFFF" font-family="Inter" font-size="12" text-anchor="middle">45.000 sessões</text>
+      <text x="170" y="495" fill="#94A3B8" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">1. view_item</text>
+
+      <!-- Step 2 -->
+      <rect x="300" y="100" width="180" height="380" rx="8" fill="#1E293B"/>
+      <rect x="315" y="240" width="150" height="220" rx="6" fill="#38BDF8"/>
+      <text x="390" y="280" fill="#FFFFFF" font-family="Sora" font-size="18" font-weight="800" text-anchor="middle">28.4%</text>
+      <text x="390" y="305" fill="#FFFFFF" font-family="Inter" font-size="12" text-anchor="middle">12.780 adições</text>
+      <text x="390" y="495" fill="#94A3B8" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">2. add_to_cart</text>
+
+      <!-- Step 3 -->
+      <rect x="520" y="100" width="180" height="380" rx="8" fill="#1E293B"/>
+      <rect x="535" y="350" width="150" height="110" rx="6" fill="#F97316"/>
+      <text x="610" y="390" fill="#FFFFFF" font-family="Sora" font-size="18" font-weight="800" text-anchor="middle">11.2%</text>
+      <text x="610" y="415" fill="#FFFFFF" font-family="Inter" font-size="12" text-anchor="middle">5.040 checkouts</text>
+      <text x="610" y="495" fill="#94A3B8" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">3. begin_checkout</text>
+
+      <!-- Step 4 -->
+      <rect x="740" y="100" width="180" height="380" rx="8" fill="#1E293B"/>
+      <rect x="755" y="410" width="150" height="50" rx="6" fill="#10B981"/>
+      <text x="830" y="435" fill="#FFFFFF" font-family="Sora" font-size="16" font-weight="800" text-anchor="middle">3.8%</text>
+      <text x="830" y="495" fill="#10B981" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">4. purchase (1.710)</text>
+
+      <!-- Drop-off indicators -->
+      <text x="290" y="200" fill="#EF4444" font-family="Inter" font-size="11" font-weight="700">&darr; 71.6% drop</text>
+      <text x="510" y="300" fill="#EF4444" font-family="Inter" font-size="11" font-weight="700">&darr; 60.5% drop</text>
+      <text x="730" y="390" fill="#EF4444" font-family="Inter" font-size="11" font-weight="700">&darr; 66.1% drop</text>
+    </svg>

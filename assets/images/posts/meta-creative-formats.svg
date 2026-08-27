@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Comparativo de Formatos de Anúncio no Meta Ads</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#2563EB" opacity="0.2"/>
+    <text x="905" y="29" fill="#2563EB" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">TESTE DE FORMATOS</text>
+  
+      
+      <!-- UGC Video 9:16 -->
+      <rect x="50" y="80" width="270" height="440" rx="12" fill="#0F172A" stroke="#2563EB" stroke-width="2"/>
+      <rect x="70" y="100" width="230" height="260" rx="8" fill="#1E293B"/>
+      <text x="185" y="220" fill="#38BDF8" font-family="Inter" font-size="13" text-anchor="middle">[Vídeo UGC Vertical 9:16]</text>
+      <text x="185" y="245" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Selfie com Legendas Dinâmicas</text>
+      <text x="185" y="395" fill="#38BDF8" font-family="Sora" font-size="15" font-weight="700" text-anchor="middle">Vídeo UGC (Reels/Stories)</text>
+      <text x="185" y="425" fill="#10B981" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">Hook Rate: 34% (Campeão)</text>
+      <text x="185" y="450" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Parece post nativo orgânico</text>
+
+      <!-- Carousel Format -->
+      <rect x="365" y="80" width="270" height="440" rx="12" fill="#0F172A" stroke="#F97316" stroke-width="2"/>
+      <rect x="385" y="100" width="230" height="260" rx="8" fill="#1E293B"/>
+      <text x="500" y="220" fill="#F97316" font-family="Inter" font-size="13" text-anchor="middle">[Carrossel de 4 Lâminas]</text>
+      <text x="500" y="245" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Passo a Passo Didático</text>
+      <text x="500" y="395" fill="#F97316" font-family="Sora" font-size="15" font-weight="700" text-anchor="middle">Carrossel Educativo</text>
+      <text x="500" y="425" fill="#10B981" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">CTR no Link: 2.8% (Excelente)</text>
+      <text x="500" y="450" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Ideal para quebrar objeções</text>
+
+      <!-- Static Clean Image -->
+      <rect x="680" y="80" width="270" height="440" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+      <rect x="700" y="100" width="230" height="260" rx="8" fill="#1E293B"/>
+      <text x="815" y="220" fill="#10B981" font-family="Inter" font-size="13" text-anchor="middle">[Banner Estático 1:1]</text>
+      <text x="815" y="245" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Headline Forte + Foto Limpa</text>
+      <text x="815" y="395" fill="#10B981" font-family="Sora" font-size="15" font-weight="700" text-anchor="middle">Imagem Estática</text>
+      <text x="815" y="425" fill="#10B981" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle">CPA: R$ 26,00 (Estável)</text>
+      <text x="815" y="450" fill="#94A3B8" font-family="Inter" font-size="11" text-anchor="middle">Excelente para compras rápidas</text>
+    </svg>

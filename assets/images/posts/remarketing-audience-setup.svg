@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Meta Ads | Gerenciador de Públicos > Público Personalizado de Remarketing</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#2563EB" opacity="0.2"/>
+    <text x="905" y="29" fill="#2563EB" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">PÚBLICO QUALIFICADO</text>
+  
+      
+      <rect x="60" y="80" width="880" height="440" rx="10" fill="#1E293B"/>
+      <text x="90" y="125" fill="#F8FAFC" font-family="Sora" font-size="18" font-weight="700">Público: [Checkout e Carrinho sem Compra (1 a 3 dias)]</text>
+      
+      <!-- Inclusion Box -->
+      <rect x="90" y="155" width="820" height="110" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+      <text x="115" y="190" fill="#10B981" font-family="Sora" font-size="14" font-weight="700">&#10003; INCLUIR pessoas que atendam a QUALQUER critério:</text>
+      <text x="115" y="220" fill="#F8FAFC" font-family="JetBrains Mono" font-size="13">&#8226; Evento: <tspan fill="#38BDF8">AddToCart</tspan> nos últimos <tspan fill="#F59E0B">3 dias</tspan></text>
+      <text x="115" y="245" fill="#F8FAFC" font-family="JetBrains Mono" font-size="13">&#8226; Evento: <tspan fill="#38BDF8">InitiateCheckout</tspan> nos últimos <tspan fill="#F59E0B">3 dias</tspan></text>
+
+      <!-- Exclusion Box -->
+      <rect x="90" y="285" width="820" height="110" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="2"/>
+      <text x="115" y="320" fill="#EF4444" font-family="Sora" font-size="14" font-weight="700">&#10007; EXCLUIR pessoas que atendam ao critério:</text>
+      <text x="115" y="350" fill="#F8FAFC" font-family="JetBrains Mono" font-size="13">&#8226; Evento: <tspan fill="#EF4444">Purchase</tspan> nos últimos <tspan fill="#F59E0B">30 dias</tspan></text>
+      <text x="115" y="375" fill="#94A3B8" font-family="Inter" font-size="11">Impede que quem já pagou continue sendo impactado por anúncios de vendas.</text>
+
+      <!-- Bottom Estimated Size -->
+      <rect x="90" y="415" width="820" height="80" rx="8" fill="#090D16"/>
+      <text x="115" y="448" fill="#38BDF8" font-family="Sora" font-size="14" font-weight="700">Tamanho Estimado: 4.800 pessoas com altíssima probabilidade de compra.</text>
+      <text x="115" y="475" fill="#94A3B8" font-family="Inter" font-size="12">ROAS Histórico Esperado: 6.5x a 9.2x.</text>
+    </svg>

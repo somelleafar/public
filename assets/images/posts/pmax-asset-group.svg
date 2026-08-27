@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Google Ads | Performance Max > Grupo de Recursos (Asset Group)</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#10B981" opacity="0.2"/>
+    <text x="905" y="29" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">QUALIDADE: EXCELENTE</text>
+  
+      
+      <rect x="60" y="80" width="880" height="440" rx="10" fill="#1E293B"/>
+      
+      <!-- Strength Gauge -->
+      <rect x="90" y="110" width="820" height="60" rx="8" fill="#0F172A" stroke="#10B981"/>
+      <text x="120" y="145" fill="#F8FAFC" font-family="Sora" font-size="16" font-weight="700">Eficácia do Anúncio:</text>
+      <text x="320" y="145" fill="#10B981" font-family="Sora" font-size="18" font-weight="800">EXCELENTE (Pontuação Máxima)</text>
+      <text x="780" y="145" fill="#38BDF8" font-family="Inter" font-size="12">&#10003; Todos os recursos preenchidos</text>
+
+      <!-- Asset Grid -->
+      <rect x="90" y="190" width="190" height="130" rx="6" fill="#0F172A"/>
+      <text x="110" y="220" fill="#38BDF8" font-family="Sora" font-size="13" font-weight="700">Títulos Curtos</text>
+      <text x="110" y="250" fill="#10B981" font-family="Sora" font-size="24" font-weight="800">5 / 5</text>
+      <text x="110" y="280" fill="#94A3B8" font-family="Inter" font-size="10">Variações de benefícios e chamadas</text>
+
+      <rect x="300" y="190" width="190" height="130" rx="6" fill="#0F172A"/>
+      <text x="320" y="220" fill="#38BDF8" font-family="Sora" font-size="13" font-weight="700">Títulos Longos</text>
+      <text x="320" y="250" fill="#10B981" font-family="Sora" font-size="24" font-weight="800">5 / 5</text>
+      <text x="320" y="280" fill="#94A3B8" font-family="Inter" font-size="10">Descrições de 90 caracteres completas</text>
+
+      <rect x="510" y="190" width="190" height="130" rx="6" fill="#0F172A"/>
+      <text x="530" y="220" fill="#38BDF8" font-family="Sora" font-size="13" font-weight="700">Imagens (Paisagem/1:1)</text>
+      <text x="530" y="250" fill="#10B981" font-family="Sora" font-size="24" font-weight="800">15 / 15</text>
+      <text x="530" y="280" fill="#94A3B8" font-family="Inter" font-size="10">Fotos reais de produtos e ambiente</text>
+
+      <rect x="720" y="190" width="190" height="130" rx="6" fill="#0F172A"/>
+      <text x="740" y="220" fill="#38BDF8" font-family="Sora" font-size="13" font-weight="700">Vídeos Verticais/16:9</text>
+      <text x="740" y="250" fill="#10B981" font-family="Sora" font-size="24" font-weight="800">4 / 4</text>
+      <text x="740" y="280" fill="#94A3B8" font-family="Inter" font-size="10">Evita animações automáticas da IA</text>
+
+      <!-- Signals Attached -->
+      <rect x="90" y="340" width="820" height="150" rx="8" fill="#0F172A"/>
+      <text x="120" y="375" fill="#F8FAFC" font-family="Sora" font-size="15" font-weight="700">Sinais de Público-Alvo Vinculados:</text>
+      <text x="120" y="410" fill="#38BDF8" font-family="Inter" font-size="13">&#8226; Segmento Personalizado: Pessoas que pesquisaram concorrentes e termos de alta intenção no Google.</text>
+      <text x="120" y="435" fill="#10B981" font-family="Inter" font-size="13">&#8226; Seus Dados: Lista de Compradores dos últimos 180 dias + Visitantes do Site.</text>
+      <text x="120" y="460" fill="#F97316" font-family="Inter" font-size="13">&#8226; Termos de Marca Própria: Excluídos via lista negativa para evitar canibalização.</text>
+    </svg>

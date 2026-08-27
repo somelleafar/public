@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+      
+    <rect width="100%" height="100%" fill="#111827" rx="14"/>
+    <rect width="100%" height="48" fill="#1E293B" rx="14"/>
+    <rect y="36" width="100%" height="12" fill="#1E293B"/>
+    <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+    <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+    <circle cx="68" cy="24" r="6" fill="#10B981"/>
+    <text x="100" y="29" fill="#94A3B8" font-family="Inter, sans-serif" font-size="13" font-weight="600">Data Layer Schema | Evento "purchase" Padronizado para GA4 E-commerce</text>
+    <rect x="840" y="14" width="130" height="22" rx="11" fill="#10B981" opacity="0.2"/>
+    <text x="905" y="29" fill="#10B981" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">PAYLOAD JSON</text>
+  
+      
+      <rect x="50" y="70" width="900" height="460" rx="8" fill="#090D16" stroke="#334155"/>
+      <text x="80" y="105" fill="#38BDF8" font-family="JetBrains Mono" font-size="12">window.dataLayer = window.dataLayer || [];</text>
+      <text x="80" y="130" fill="#94A3B8" font-family="JetBrains Mono" font-size="12">dataLayer.push({ ecommerce: null }); // Limpa o estado anterior</text>
+      <text x="80" y="160" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">dataLayer.push({</text>
+      <text x="110" y="185" fill="#F97316" font-family="JetBrains Mono" font-size="12">event: <tspan fill="#38BDF8">"purchase"</tspan>,</text>
+      <text x="110" y="210" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">ecommerce: {</text>
+      <text x="140" y="235" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">transaction_id: <tspan fill="#10B981">"PED-2026-9041"</tspan>,</text>
+      <text x="140" y="260" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">value: <tspan fill="#F59E0B">349.90</tspan>,</text>
+      <text x="140" y="285" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">currency: <tspan fill="#38BDF8">"BRL"</tspan>,</text>
+      <text x="140" y="310" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">shipping: <tspan fill="#F59E0B">25.00</tspan>,</text>
+      <text x="140" y="335" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">items: [</text>
+      <text x="170" y="360" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">{</text>
+      <text x="200" y="385" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">item_id: <tspan fill="#10B981">"CALC-JEANS-01"</tspan>, item_name: <tspan fill="#10B981">"Calça Jeans Slim"</tspan>, price: <tspan fill="#F59E0B">349.90</tspan>, quantity: <tspan fill="#F59E0B">1</tspan></text>
+      <text x="170" y="410" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">}</text>
+      <text x="140" y="435" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">]</text>
+      <text x="110" y="460" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">}</text>
+      <text x="80" y="485" fill="#F8FAFC" font-family="JetBrains Mono" font-size="12">});</text>
+    </svg>
